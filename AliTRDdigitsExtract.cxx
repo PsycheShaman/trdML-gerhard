@@ -353,7 +353,8 @@ void AliTRDdigitsExtract::AnalyseEvent()
       //fhcompe->Fill(pt);
 
 
-    }//pion pdg code is 211
+    }
+    //pion pdg code is 211
     if ( abs(fV0tags[i]) == 211 ) {
       fhptp->Fill(track->P());
       fhsigmap->Fill(fPIDResponse->NumberOfSigmasTPC(track, AliPID::kPion)); // only sigma
@@ -398,7 +399,7 @@ void AliTRDdigitsExtract::FillV0PIDlist(){
   cout << "entering FillV0PIDlist" << endl;
 
   // no need to run if the V0 cuts are not set
-  //but fd o we need to set them?
+  //but do we need to set them?
   if (!fV0cuts) {
     cout << "FillV0PIDlist: skip event - no V0 cuts" << endl;
     return;
@@ -531,7 +532,7 @@ void AliTRDdigitsExtract::DigitsDictionary(AliESDtrack* track, Int_t i, Int_t iT
     if (trdtrack && trdtrack->GetNumberOfTracklets() < 6) return;
 
 
-//I'm changing this 
+//I'm changing this
 //    if (track->Pt() < 1.5) return;
 if (track->Pt() < 1.5) return;
     // are there tracks without outer params?
@@ -539,6 +540,9 @@ if (track->Pt() < 1.5) return;
       AliWarning(Form("Track %d has no OuterParam", iTrack));
       return;
     }
+
+//we want the track's momentum so we can decide which neural network to run it through
+Int_t momentum = track->Pt();
 
     // newest addition
     // print some info about the track
@@ -557,7 +561,7 @@ if (track->Pt() < 1.5) return;
     }
 
     ofile << "\n" << universalTracki << ": {'Event': " << fEventNoInFile << ",\n\t'V0TrackID': " << iV0
-    << ",\n\t'track': " << iTrack << ",\n\t'pdgCode': " << pdgCode << ",";
+    << ",\n\t'track': " << iTrack << ",\n\t'pdgCode': " << pdgCode << ",\n\t'momentum': " "," << momentum << ",";
     universalTracki++;
 
     // look for tracklets in all 5 layers
