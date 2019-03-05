@@ -57,7 +57,7 @@ ClassImp(AliTRDdigitsExtract)
 //________________________________________________________________________
 AliTRDdigitsExtract::AliTRDdigitsExtract(const char *name)
 : AliTRDdigitsTask(name),
- fPIDResponse(0)
+ fPIDResponse(0), runNumber(0)
 {
   // Constructor
 
@@ -86,10 +86,13 @@ void AliTRDdigitsExtract::UserCreateOutputObjects()
   ofile.open("pythonDict.txt", ios::app);
   //ofile.open("dat.csv", ios::app);
   if (!ofile.is_open()) {
-    printf("ERROR: Could not open output file (dat.csv).");
+    printf("ERROR: Could not open output file (pythonDict.txt).");
   }
   //TODO: insert csv headers
-  ofile << "{";
+//fuck this bracket
+  //ofile << "{";
+
+  ofile << " ";
 
   ofile.close();
 
@@ -184,7 +187,11 @@ void AliTRDdigitsExtract::UserCreateOutputObjects()
   AliAnalysisManager *man = AliAnalysisManager::GetAnalysisManager();
   if (man){
     AliInputEventHandler* inputHandler = (AliInputEventHandler*)(man->GetInputEventHandler());
-    if (inputHandler) fPIDResponse = inputHandler->GetPIDResponse();
+    if (inputHandler){
+      fPIDResponse = inputHandler->GetPIDResponse();
+      const AliVEvent* eventx = inputHandler->GetEvent();
+      Int_t runNumber = eventx->GetRunNumber();
+    }
   }
   //cout << "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ pre post data ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~" << endl;
   PostData(1, fOutputList);
@@ -220,7 +227,10 @@ void AliTRDdigitsExtract::UserExec(Option_t *)
 
   // -----------------------------------------------------------------
   // prepare event data structures
+
   fESD = dynamic_cast<AliESDEvent*>(InputEvent());
+
+
    //esdfriend->Print();
   cout << "this is an experiment " << dynamic_cast<AliESDEvent*>(InputEvent()) << endl;
    //else { cout << "the trees are awakening" << endl; }
@@ -235,6 +245,8 @@ void AliTRDdigitsExtract::UserExec(Option_t *)
     // skip empty event
     return;
   }
+
+
 
   // make digits available
   cout << "let's see if this works out" << endl;
@@ -302,11 +314,13 @@ void AliTRDdigitsExtract::AnalyseEvent()
   // yes there are alot of them
 
 //reset PT
-  Int_t pt = 0;
+  Float_t pt = 0;
   //get the number of tracks contained in the ESD
   Int_t nTracks = fESD->GetNumberOfTracks();
   // loop over tracks
-  for(Int_t i=0; i < nTracks; i++) {
+
+
+for(Int_t i=0; i < nTracks; i++) {
 //get the specific track
     AliESDtrack* track = fESD->GetTrack(i);
     //bethe bloch is filled as dE\dx, which is the tpc signal,
@@ -322,7 +336,7 @@ void AliTRDdigitsExtract::AnalyseEvent()
 //the PDG code for an electron is 11
     if ( abs(fV0tags[i]) == 11) {
       fhpte->Fill(track->P());
-      pt = (Int_t)track->P();
+      pt = (Float_t)track->P();
       fhsigmae->Fill(fPIDResponse->NumberOfSigmasTPC(track, AliPID::kElectron));  // only sigma
       // sigma on different GeV
 
@@ -523,7 +537,6 @@ void AliTRDdigitsExtract::DigitsDictionary(AliESDtrack* track, Int_t i, Int_t iT
 
 //represents a local Kalman filtered track from the TRD
     AliTRDtrackV1* trdtrack = NULL;
-
     // skip boring tracks
 
     //I'm changin this to only keeping tracks that have exactly 6 tracklets, can change back
@@ -532,7 +545,6 @@ void AliTRDdigitsExtract::DigitsDictionary(AliESDtrack* track, Int_t i, Int_t iT
     if (trdtrack && trdtrack->GetNumberOfTracklets() < 6) return;
 
 
-//I'm changing this
 //    if (track->Pt() < 1.5) return;
 if (track->Pt() < 1.5) return;
     // are there tracks without outer params?
@@ -542,7 +554,7 @@ if (track->Pt() < 1.5) return;
     }
 
 //we want the track's momentum so we can decide which neural network to run it through
-Int_t momentum = track->Pt();
+Float_t momentum = track->Pt();
 
     // newest addition
     // print some info about the track
@@ -560,8 +572,8 @@ Int_t momentum = track->Pt();
       printf("ERROR: Could not open output file (pythonDict.txt).");
     }
 
-    ofile << "\n" << universalTracki << ": {'Event': " << fEventNoInFile << ",\n\t'V0TrackID': " << iV0
-    << ",\n\t'track': " << iTrack << ",\n\t'pdgCode': " << pdgCode << ",\n\t'momentum': " "," << momentum << ",";
+    ofile << "\n" << universalTracki << ": {'RunNumber:'" << runNumber << ",\n\t'Event': " << fEventNoInFile << ",\n\t'V0TrackID': " << iV0
+    << ",\n\t'track': " << iTrack << ",\n\t'pdgCode': " << pdgCode << ",\n\t'momentum': " << momentum << ",";
     universalTracki++;
 
     // look for tracklets in all 5 layers
