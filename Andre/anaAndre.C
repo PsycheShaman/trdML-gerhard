@@ -26,7 +26,7 @@ void ana()
   gROOT->ProcessLine(".include $ALICE_ROOT/include");
   gROOT->ProcessLine(".include $ALICE_PHYSICS/include");
 #endif
-
+  
   gSystem->Load("libTree.so");
   gSystem->Load("libGeom.so");
   gSystem->Load("libVMC.so");
@@ -44,7 +44,7 @@ void ana()
   gROOT->LoadMacro("CreateESDChain.C");
 #endif
 //
-//  TChain* chain = CreateESDChain("files.txt", 1, 0, kFALSE, kTRUE);
+  TChain* chain = CreateESDChain("files.txt", 1, 0, kFALSE, kTRUE);
 //
 //
 
@@ -78,7 +78,7 @@ void ana()
   gROOT->LoadMacro("\$ALICE_ROOT/ANALYSIS/macros/AddTaskPIDResponse.C");
   AddTaskPIDResponse(); // *
 #endif
-
+  
   ///////////////////////////
   //// The TRD filter Task
   ///////////////////////////
@@ -98,7 +98,7 @@ void ana()
   //>ConnectInput(filterTask,0,cinput);
   //mgr->ConnectOutput(filterTask,1,coutput);
 
-
+ 
   // ================================================================
   // Add digits extraction task
 
@@ -111,11 +111,11 @@ void ana()
   gROOT->LoadMacro("AddExtractTask.C");
   AddExtractTask();
 #endif
-
+  
   // ================================================================
 
-
-
+  
+  
   // Enable debug printouts
   mgr->SetDebugLevel(2);
 
@@ -123,20 +123,22 @@ void ana()
 
   if (!mgr->InitAnalysis()) return;
   mgr->PrintStatus();
-
+  
    if (local){
-     TChain* chain = new TChain("esdTree");
-
+     //TChain* chain = new TChain("esdTree");
+      
+     //mgr->StartAnalysis("local", chain,1000);
+  
      //chain->Add("alien:///alice/data/2016/LHC16q/000265377/pass1_CENT_wSDD/16000265377019.102/root_archive.zip#AliESDs.root");
      chain->Add("/alice/data/2016/LHC16q/000265377/pass1_CENT_wSDD/16000265377019.102/root_archive.zip#AliESDs.root");
-
+     
      // start the analysis locally, reading the events from the tchain
      mgr->StartAnalysis("local", chain,100);
-
+  
   }else{
-    //
+    // 
     AliAnalysisAlien *alienHandler = new AliAnalysisAlien();
-    //
+    // 
     alienHandler->AddIncludePath("-I. -I$ROOTSYS/include -I$ALICE_ROOT -I$ALICE_ROOT/include -I$ALICE_PHYSICS/include");
     //
     alienHandler->SetAdditionalLibs("AliTRDdigitsExtract.cxx AliTRDdigitsExtract.h");
@@ -151,44 +153,34 @@ void ana()
     alienHandler->SetDataPattern("pass1_CENT_wSDD/*/*ESDs.root"); // 16000265377039.901
     //
     alienHandler->SetRunPrefix("000");
-
+    
     // runnumber
-//G: here I will comment out the first run and uncomment the second one
-
-    //alienHandler->AddRunNumber(265377); //might have been some issue with merging: ===== TERMINATING GRID ANALYSIS JOB: testAnalysis
-// ->AliAnalysisManager::ImportWrappers()
-// E-TBufferFile::CheckByteCount: object of class TH2F read too many bytes: 1600320570 instead of 526578746
-// W-TBufferFile::CheckByteCount: TH2F::Streamer() not in sync with data on file DigitsExtractQA.root, fix Streamer()
-//    Importing data for container cdigitqa
-//     -> file DigitsExtractQA.root
-//    ImportData: Unwrapping data cdigitqa for container cdigitqa
-// <-AliAnalysisManager::ImportWrappers(): 1 containers imported
-// ->AliAnalysisManager::Terminate()
-// W-AliAnalysisManager::ValidateOutputs: File DigitsExtractQA.root was not closed. Closing.
-// =Analysis testAnalysis= Terminate time:  0.00130916[sec]
-
-   alienHandler->AddRunNumber(265378);
-//    alienHandler->AddRunNumber(265309);
-//    alienHandler->AddRunNumber(265332);
-//    alienHandler->AddRunNumber(265334);
-//    alienHandler->AddRunNumber(265335);
-//    alienHandler->AddRunNumber(265336);
-//    alienHandler->AddRunNumber(265338);
-//    alienHandler->AddRunNumber(265339);
-//    alienHandler->AddRunNumber(265342);
-//    alienHandler->AddRunNumber(265343);
-//    alienHandler->AddRunNumber(265344);
-//    alienHandler->AddRunNumber(265381);
-//    alienHandler->AddRunNumber(265383);
-//    alienHandler->AddRunNumber(265385);
-/*    alienHandler->AddRunNumber(265388);
+    alienHandler->AddRunNumber(265377);
+    //alienHandler->AddRunNumber(265378);
+    /*
+    alienHandlet->AddRunNumber(265309);
+    alienHandler->AddRunNumber(265332);
+    alienHandler->AddRunNumber(265334);
+    alienHandler->AddRunNumber(265335);
+    alienHandler->AddRunNumber(265336);
+    alienHandler->AddRunNumber(265338);
+    alienHandler->AddRunNumber(265339);
+    alienHandler->AddRunNumber(265342);
+    alienHandler->AddRunNumber(265343);
+    alienHandler->AddRunNumber(265344);
+    alienHandler->AddRunNumber(265377);
+    alienHandler->AddRunNumber(265378);
+    alienHandler->AddRunNumber(265381);
+    alienHandler->AddRunNumber(265383);
+    alienHandler->AddRunNumber(265385);
+    alienHandler->AddRunNumber(265388);
     alienHandler->AddRunNumber(265419);
     alienHandler->AddRunNumber(265420);
     alienHandler->AddRunNumber(265425);
     alienHandler->AddRunNumber(265426);
-    alienHandler->AddRunNumber(265499);*/
-
-
+    alienHandler->AddRunNumber(265499);
+    */
+    
     // number of files per subjob
     alienHandler->SetSplitMaxInputFileNumber(40);
     TString name = "myTask";
@@ -199,7 +191,7 @@ void ana()
     //
     alienHandler->SetTTL(10000);
     alienHandler->SetJDLName("myTask.jdl");
-
+    
     alienHandler->SetOutputToRunNo(kTRUE);
     alienHandler->SetKeepLogs(kTRUE);
     //
@@ -214,15 +206,12 @@ void ana()
     //
     alienHandler->SetMaxMergeStages(1);
     alienHandler->SetMergeViaJDL(kTRUE);
-    //alienHandler->SetMergeViaJDL(kFALSE);
-
-//*****************************************8
-//  alienHandler->SetMergeViaJDL(kFALSE):
+    
     //
     //
-    alienHandler->SetGridWorkingDir("wd");
-    alienHandler->SetGridOutputDir("outDir265378");
-
+    alienHandler->SetGridWorkingDir("myWorkDir");
+    alienHandler->SetGridOutputDir("myOutDir");
+    
     //
     mgr->SetGridHandler(alienHandler);
     if (gridTest){
@@ -234,12 +223,13 @@ void ana()
     }else{
 	//
 	alienHandler->SetRunMode("full");
-	//
-  //alienHandler->SetRunMode("terminate");
 	mgr->StartAnalysis("grid");
-
     }
+    
+  }     
+       
+}      
+             
+         
 
-  }
 
-}

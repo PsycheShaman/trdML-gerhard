@@ -26,28 +26,27 @@ public:
   virtual void   UserExec(Option_t *option);
   virtual void   Terminate(Option_t *);
   void DigitsDictionary(AliESDtrack* track, Int_t i, Int_t iTrack, Int_t iV0, Int_t pdgCode);
-
+  
 public:
   void SetV0KineCuts(AliESDv0KineCuts *c){
     fV0cuts = c;
     std::cout << "set V0 cuts to " << fV0cuts << std::endl;
   }
   AliESDv0KineCuts* GetV0KineCuts() {return fV0cuts;}
-
+  
 protected:
-
+  
   void FillV0PIDlist();
 
   virtual void AnalyseEvent();
 
   AliPIDResponse* fPIDResponse;
 
-  Int_t fEventNoInFile;
-  Int_t universalTracki;
-  //Int_t runNumber;
-
+  Int_t fEventNoInFile; 
+  Int_t universalTracki; 
+    
 private:
-
+  
   AliTRDdigitsExtract(const AliTRDdigitsExtract&); // not implemented
   AliTRDdigitsExtract& operator=(const AliTRDdigitsExtract&); // not implemented
 

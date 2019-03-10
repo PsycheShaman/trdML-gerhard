@@ -2,98 +2,258 @@
 <alien>
   <collection name="allfiles">
     <event name="1">
-      <file name="pythonDict.txt" aclId="" broken="0" ctime="2019-01-17 08:05:01" dir="30005878" entryId="30005992" expiretime="" gowner="cviljoen" guid="EB5B0BBA-1A25-11E9-AFA2-430F33A10603" guidtime="11E91A25" jobid="1363151629" lfn="/alice/cern.ch/user/c/cviljoen/wd/outDir265309/000265309/001/pythonDict.txt" md5="dd19d1f2103278e9c7c2975f078d66e9" owner="cviljoen" perm="755" replicated="0" size="41692" turl="alien:///alice/cern.ch/user/c/cviljoen/wd/outDir265309/000265309/001/pythonDict.txt" type="f" />
+      <file name="pythonDict.txt" aclId="" broken="0" ctime="2019-03-08 19:30:28" dir="31672695" entryId="31672698" expiretime="" gowner="cviljoen" guid="3CA29E8A-41D0-11E9-9FF3-5F8618A04F0A" guidtime="11E941D0" jobid="1416518835" lfn="/alice/cern.ch/user/c/cviljoen/wd/outDir265377/000265377/001/pythonDict.txt" md5="2470eeeba6601de40b4c69f89bf47c4f" owner="cviljoen" perm="755" replicated="0" size="4843" turl="alien:///alice/cern.ch/user/c/cviljoen/wd/outDir265377/000265377/001/pythonDict.txt" type="f" />
     </event>
     <event name="10">
-      <file name="pythonDict.txt" aclId="" broken="0" ctime="2019-01-17 08:17:50" dir="30006751" entryId="30006924" expiretime="" gowner="cviljoen" guid="F532B9B0-1A27-11E9-B668-CF9C2DA2AE9B" guidtime="11E91A27" jobid="1363151638" lfn="/alice/cern.ch/user/c/cviljoen/wd/outDir265309/000265309/010/pythonDict.txt" md5="645368a5503631c0a3515d732a7ea3af" owner="cviljoen" perm="755" replicated="0" size="1034724" turl="alien:///alice/cern.ch/user/c/cviljoen/wd/outDir265309/000265309/010/pythonDict.txt" type="f" />
+      <file name="pythonDict.txt" aclId="" broken="0" ctime="2019-03-08 19:41:09" dir="31673001" entryId="31673004" expiretime="" gowner="cviljoen" guid="BA4D47C6-41D1-11E9-A658-8B963AED9DDA" guidtime="11E941D1" jobid="1416518844" lfn="/alice/cern.ch/user/c/cviljoen/wd/outDir265377/000265377/010/pythonDict.txt" md5="11c050f96391ece3437d67043caa124f" owner="cviljoen" perm="755" replicated="0" size="615723" turl="alien:///alice/cern.ch/user/c/cviljoen/wd/outDir265377/000265377/010/pythonDict.txt" type="f" />
     </event>
     <event name="11">
-      <file name="pythonDict.txt" aclId="" broken="0" ctime="2019-01-17 08:18:53" dir="30006812" entryId="30006997" expiretime="" gowner="cviljoen" guid="1BF9FB26-1A28-11E9-9C8A-A7C8EB1316F0" guidtime="11E91A28" jobid="1363151639" lfn="/alice/cern.ch/user/c/cviljoen/wd/outDir265309/000265309/011/pythonDict.txt" md5="1e9c8bf77ea084be05774e228783dcdb" owner="cviljoen" perm="755" replicated="0" size="976774" turl="alien:///alice/cern.ch/user/c/cviljoen/wd/outDir265309/000265309/011/pythonDict.txt" type="f" />
+      <file name="pythonDict.txt" aclId="" broken="0" ctime="2019-03-08 19:31:37" dir="31672722" entryId="31672725" expiretime="" gowner="cviljoen" guid="6409C9EE-41D0-11E9-A01D-F7A6183E1FB8" guidtime="11E941D0" jobid="1416518845" lfn="/alice/cern.ch/user/c/cviljoen/wd/outDir265377/000265377/011/pythonDict.txt" md5="dd0a277400b5a782861f83b9730cf576" owner="cviljoen" perm="755" replicated="0" size="70856" turl="alien:///alice/cern.ch/user/c/cviljoen/wd/outDir265377/000265377/011/pythonDict.txt" type="f" />
     </event>
     <event name="12">
-      <file name="pythonDict.txt" aclId="" broken="0" ctime="2019-01-17 08:04:51" dir="30005930" entryId="30005979" expiretime="" gowner="cviljoen" guid="22E29364-1A26-11E9-B2C2-B766E4BC5ABD" guidtime="11E91A26" jobid="1363151640" lfn="/alice/cern.ch/user/c/cviljoen/wd/outDir265309/000265309/012/pythonDict.txt" md5="5be16002abc79f952688a0a60943e0a1" owner="cviljoen" perm="755" replicated="0" size="310711" turl="alien:///alice/cern.ch/user/c/cviljoen/wd/outDir265309/000265309/012/pythonDict.txt" type="f" />
+      <file name="pythonDict.txt" aclId="" broken="0" ctime="2019-03-08 19:39:49" dir="31672954" entryId="31672962" expiretime="" gowner="cviljoen" guid="86955E0A-41D1-11E9-8B97-8F5B7C4F2821" guidtime="11E941D1" jobid="1416518846" lfn="/alice/cern.ch/user/c/cviljoen/wd/outDir265377/000265377/012/pythonDict.txt" md5="12d8a08dcf4baf9f78a17260db9a8a43" owner="cviljoen" perm="755" replicated="0" size="688241" turl="alien:///alice/cern.ch/user/c/cviljoen/wd/outDir265377/000265377/012/pythonDict.txt" type="f" />
     </event>
     <event name="13">
-      <file name="pythonDict.txt" aclId="" broken="0" ctime="2019-01-17 08:06:07" dir="30005929" entryId="30006033" expiretime="" gowner="cviljoen" guid="19196B3C-1A26-11E9-B7A7-B756B1E2353A" guidtime="11E91A26" jobid="1363151641" lfn="/alice/cern.ch/user/c/cviljoen/wd/outDir265309/000265309/013/pythonDict.txt" md5="3fedc88b1c1861979862ecd3311d2eb8" owner="cviljoen" perm="755" replicated="0" size="81622" turl="alien:///alice/cern.ch/user/c/cviljoen/wd/outDir265309/000265309/013/pythonDict.txt" type="f" />
+      <file name="pythonDict.txt" aclId="" broken="0" ctime="2019-03-08 19:36:45" dir="31672809" entryId="31672819" expiretime="" gowner="cviljoen" guid="1BE1DBC4-41D1-11E9-B1D0-9B7D909A867B" guidtime="11E941D1" jobid="1416518847" lfn="/alice/cern.ch/user/c/cviljoen/wd/outDir265377/000265377/013/pythonDict.txt" md5="23e7d23dca2d51e0456dd2171673e704" owner="cviljoen" perm="755" replicated="0" size="553924" turl="alien:///alice/cern.ch/user/c/cviljoen/wd/outDir265377/000265377/013/pythonDict.txt" type="f" />
     </event>
     <event name="14">
-      <file name="pythonDict.txt" aclId="" broken="0" ctime="2019-01-17 08:03:51" dir="30005892" entryId="30005935" expiretime="" gowner="cviljoen" guid="F6862628-1A25-11E9-AF50-17C9CEC8ED8E" guidtime="11E91A25" jobid="1363151642" lfn="/alice/cern.ch/user/c/cviljoen/wd/outDir265309/000265309/014/pythonDict.txt" md5="44f26aa71cc7d369f9556e53312901dc" owner="cviljoen" perm="755" replicated="0" size="45839" turl="alien:///alice/cern.ch/user/c/cviljoen/wd/outDir265309/000265309/014/pythonDict.txt" type="f" />
+      <file name="pythonDict.txt" aclId="" broken="0" ctime="2019-03-08 19:36:45" dir="31672810" entryId="31672825" expiretime="" gowner="cviljoen" guid="1B1A30E2-41D1-11E9-A052-331A72060364" guidtime="11E941D1" jobid="1416518848" lfn="/alice/cern.ch/user/c/cviljoen/wd/outDir265377/000265377/014/pythonDict.txt" md5="ec909ca857ea4b4baf1844af15c531ee" owner="cviljoen" perm="755" replicated="0" size="561455" turl="alien:///alice/cern.ch/user/c/cviljoen/wd/outDir265377/000265377/014/pythonDict.txt" type="f" />
     </event>
     <event name="15">
-      <file name="pythonDict.txt" aclId="" broken="0" ctime="2019-01-17 08:07:03" dir="30005975" entryId="30006070" expiretime="" gowner="cviljoen" guid="632839CE-1A26-11E9-81DB-A718172B90D3" guidtime="11E91A26" jobid="1363151643" lfn="/alice/cern.ch/user/c/cviljoen/wd/outDir265309/000265309/015/pythonDict.txt" md5="c462164289cba0dcee264a3a89f74519" owner="cviljoen" perm="755" replicated="0" size="32429" turl="alien:///alice/cern.ch/user/c/cviljoen/wd/outDir265309/000265309/015/pythonDict.txt" type="f" />
+      <file name="pythonDict.txt" aclId="" broken="0" ctime="2019-03-08 19:38:56" dir="31672914" entryId="31672929" expiretime="" gowner="cviljoen" guid="66A17142-41D1-11E9-9571-87B05CF97CC8" guidtime="11E941D1" jobid="1416518849" lfn="/alice/cern.ch/user/c/cviljoen/wd/outDir265377/000265377/015/pythonDict.txt" md5="8048db8d9d23a70464b6b5d20b028ea4" owner="cviljoen" perm="755" replicated="0" size="713677" turl="alien:///alice/cern.ch/user/c/cviljoen/wd/outDir265377/000265377/015/pythonDict.txt" type="f" />
     </event>
     <event name="16">
-      <file name="pythonDict.txt" aclId="" broken="0" ctime="2019-01-17 08:04:00" dir="30005906" entryId="30005948" expiretime="" gowner="cviljoen" guid="FB141CAE-1A25-11E9-A645-F351A42C5810" guidtime="11E91A25" jobid="1363151644" lfn="/alice/cern.ch/user/c/cviljoen/wd/outDir265309/000265309/016/pythonDict.txt" md5="28ca2207f7f132985e5a89e99e13c004" owner="cviljoen" perm="755" replicated="0" size="59766" turl="alien:///alice/cern.ch/user/c/cviljoen/wd/outDir265309/000265309/016/pythonDict.txt" type="f" />
+      <file name="pythonDict.txt" aclId="" broken="0" ctime="2019-03-08 19:38:57" dir="31672913" entryId="31672935" expiretime="" gowner="cviljoen" guid="66D3D4C0-41D1-11E9-AB18-F7C549AA089A" guidtime="11E941D1" jobid="1416518850" lfn="/alice/cern.ch/user/c/cviljoen/wd/outDir265377/000265377/016/pythonDict.txt" md5="b9c90b26678e75ee5a5f16257ee49307" owner="cviljoen" perm="755" replicated="0" size="528891" turl="alien:///alice/cern.ch/user/c/cviljoen/wd/outDir265377/000265377/016/pythonDict.txt" type="f" />
     </event>
     <event name="17">
-      <file name="pythonDict.txt" aclId="" broken="0" ctime="2019-01-17 08:04:00" dir="30005905" entryId="30005954" expiretime="" gowner="cviljoen" guid="FAAC2234-1A25-11E9-B6F0-5BDB78B2F0BD" guidtime="11E91A25" jobid="1363151645" lfn="/alice/cern.ch/user/c/cviljoen/wd/outDir265309/000265309/017/pythonDict.txt" md5="c4891c309fefd8797dd1645ad8da16cf" owner="cviljoen" perm="755" replicated="0" size="57716" turl="alien:///alice/cern.ch/user/c/cviljoen/wd/outDir265309/000265309/017/pythonDict.txt" type="f" />
+      <file name="pythonDict.txt" aclId="" broken="0" ctime="2019-03-08 19:36:45" dir="31672806" entryId="31672831" expiretime="" gowner="cviljoen" guid="1A2CFCA0-41D1-11E9-952F-4B2FD52D5768" guidtime="11E941D1" jobid="1416518851" lfn="/alice/cern.ch/user/c/cviljoen/wd/outDir265377/000265377/017/pythonDict.txt" md5="53a20716bd98d0dfdf299d1fd830abbb" owner="cviljoen" perm="755" replicated="0" size="519586" turl="alien:///alice/cern.ch/user/c/cviljoen/wd/outDir265377/000265377/017/pythonDict.txt" type="f" />
     </event>
     <event name="18">
-      <file name="pythonDict.txt" aclId="" broken="0" ctime="2019-01-17 08:03:51" dir="30005891" entryId="30005941" expiretime="" gowner="cviljoen" guid="F83A3FC2-1A25-11E9-8784-47718DF49236" guidtime="11E91A25" jobid="1363151646" lfn="/alice/cern.ch/user/c/cviljoen/wd/outDir265309/000265309/018/pythonDict.txt" md5="b41ee2ab411f39e5679250189cbdf827" owner="cviljoen" perm="755" replicated="0" size="27120" turl="alien:///alice/cern.ch/user/c/cviljoen/wd/outDir265309/000265309/018/pythonDict.txt" type="f" />
+      <file name="pythonDict.txt" aclId="" broken="0" ctime="2019-03-08 19:38:46" dir="31672911" entryId="31672916" expiretime="" gowner="cviljoen" guid="652734F0-41D1-11E9-A594-0BEFE2B51023" guidtime="11E941D1" jobid="1416518852" lfn="/alice/cern.ch/user/c/cviljoen/wd/outDir265377/000265377/018/pythonDict.txt" md5="c319aadacfa13bf2a09dc7a8340d11e0" owner="cviljoen" perm="755" replicated="0" size="607419" turl="alien:///alice/cern.ch/user/c/cviljoen/wd/outDir265377/000265377/018/pythonDict.txt" type="f" />
     </event>
     <event name="19">
-      <file name="pythonDict.txt" aclId="" broken="0" ctime="2019-01-17 08:05:01" dir="30005933" entryId="30005998" expiretime="" gowner="cviljoen" guid="1E2FDDB8-1A26-11E9-8F02-2B96A798AC6B" guidtime="11E91A26" jobid="1363151647" lfn="/alice/cern.ch/user/c/cviljoen/wd/outDir265309/000265309/019/pythonDict.txt" md5="89f18803cacee06a5a1e22bbe498b153" owner="cviljoen" perm="755" replicated="0" size="109836" turl="alien:///alice/cern.ch/user/c/cviljoen/wd/outDir265309/000265309/019/pythonDict.txt" type="f" />
+      <file name="pythonDict.txt" aclId="" broken="0" ctime="2019-03-08 19:38:57" dir="31672912" entryId="31672941" expiretime="" gowner="cviljoen" guid="6765FFD0-41D1-11E9-A925-5B8E0D99B41C" guidtime="11E941D1" jobid="1416518853" lfn="/alice/cern.ch/user/c/cviljoen/wd/outDir265377/000265377/019/pythonDict.txt" md5="2cc38e5d77502009cddff0064a3b6a10" owner="cviljoen" perm="755" replicated="0" size="546713" turl="alien:///alice/cern.ch/user/c/cviljoen/wd/outDir265377/000265377/019/pythonDict.txt" type="f" />
     </event>
     <event name="2">
-      <file name="pythonDict.txt" aclId="" broken="0" ctime="2019-01-17 08:02:48" dir="30005867" entryId="30005894" expiretime="" gowner="cviljoen" guid="CBBDA4A2-1A25-11E9-B318-DB6794603D5C" guidtime="11E91A25" jobid="1363151630" lfn="/alice/cern.ch/user/c/cviljoen/wd/outDir265309/000265309/002/pythonDict.txt" md5="74896d0ba61ea479e699f01537b4b7ca" owner="cviljoen" perm="755" replicated="0" size="70262" turl="alien:///alice/cern.ch/user/c/cviljoen/wd/outDir265309/000265309/002/pythonDict.txt" type="f" />
+      <file name="pythonDict.txt" aclId="" broken="0" ctime="2019-03-08 19:29:26" dir="31672686" entryId="31672688" expiretime="" gowner="cviljoen" guid="158970E4-41D0-11E9-9A9C-7303E6B92F4B" guidtime="11E941D0" jobid="1416518836" lfn="/alice/cern.ch/user/c/cviljoen/wd/outDir265377/000265377/002/pythonDict.txt" md5="3552f350474e523675f2e6cb24f4f81f" owner="cviljoen" perm="755" replicated="0" size="14696" turl="alien:///alice/cern.ch/user/c/cviljoen/wd/outDir265377/000265377/002/pythonDict.txt" type="f" />
     </event>
     <event name="20">
-      <file name="pythonDict.txt" aclId="" broken="0" ctime="2019-01-17 08:04:00" dir="30005907" entryId="30005960" expiretime="" gowner="cviljoen" guid="FBFC141E-1A25-11E9-9B5F-9B47156700F7" guidtime="11E91A25" jobid="1363151649" lfn="/alice/cern.ch/user/c/cviljoen/wd/outDir265309/000265309/020/pythonDict.txt" md5="0ebb9357bb23cced6a192a0c24f74176" owner="cviljoen" perm="755" replicated="0" size="70077" turl="alien:///alice/cern.ch/user/c/cviljoen/wd/outDir265309/000265309/020/pythonDict.txt" type="f" />
+      <file name="pythonDict.txt" aclId="" broken="0" ctime="2019-03-08 19:36:45" dir="31672807" entryId="31672837" expiretime="" gowner="cviljoen" guid="1C6276B2-41D1-11E9-AF4B-DBED6B2AE22C" guidtime="11E941D1" jobid="1416518854" lfn="/alice/cern.ch/user/c/cviljoen/wd/outDir265377/000265377/020/pythonDict.txt" md5="409dcf044c8451a61e6362a798ca0d69" owner="cviljoen" perm="755" replicated="0" size="517231" turl="alien:///alice/cern.ch/user/c/cviljoen/wd/outDir265377/000265377/020/pythonDict.txt" type="f" />
     </event>
     <event name="21">
-      <file name="pythonDict.txt" aclId="" broken="0" ctime="2019-01-17 20:01:46" dir="30014669" entryId="30014697" expiretime="" gowner="cviljoen" guid="5188F74E-1A8A-11E9-908C-CB38354DCF88" guidtime="11E91A8A" jobid="1363151650" lfn="/alice/cern.ch/user/c/cviljoen/wd/outDir265309/000265309/021/pythonDict.txt" md5="0fa325135218e3a7ead98eafc54e0720" owner="cviljoen" perm="755" replicated="0" size="209300" turl="alien:///alice/cern.ch/user/c/cviljoen/wd/outDir265309/000265309/021/pythonDict.txt" type="f" />
+      <file name="pythonDict.txt" aclId="" broken="0" ctime="2019-03-08 19:36:45" dir="31672805" entryId="31672844" expiretime="" gowner="cviljoen" guid="19D938EA-41D1-11E9-BB88-4FF8B841B8D5" guidtime="11E941D1" jobid="1416518855" lfn="/alice/cern.ch/user/c/cviljoen/wd/outDir265377/000265377/021/pythonDict.txt" md5="4c361e79a1d4d2a5211688f0120cb0bd" owner="cviljoen" perm="755" replicated="0" size="523543" turl="alien:///alice/cern.ch/user/c/cviljoen/wd/outDir265377/000265377/021/pythonDict.txt" type="f" />
     </event>
     <event name="22">
-      <file name="pythonDict.txt" aclId="" broken="0" ctime="2019-01-17 08:50:53" dir="30009013" entryId="30009250" expiretime="" gowner="cviljoen" guid="747542B6-1A2C-11E9-9ECE-C3BA49B9A7DA" guidtime="11E91A2C" jobid="1363151651" lfn="/alice/cern.ch/user/c/cviljoen/wd/outDir265309/000265309/022/pythonDict.txt" md5="ca554bd8519ec25c5b4a2de533b52463" owner="cviljoen" perm="755" replicated="0" size="706835" turl="alien:///alice/cern.ch/user/c/cviljoen/wd/outDir265309/000265309/022/pythonDict.txt" type="f" />
+      <file name="pythonDict.txt" aclId="" broken="0" ctime="2019-03-08 19:37:46" dir="31672883" entryId="31672891" expiretime="" gowner="cviljoen" guid="414693D2-41D1-11E9-B691-A771C3CEFA84" guidtime="11E941D1" jobid="1416518856" lfn="/alice/cern.ch/user/c/cviljoen/wd/outDir265377/000265377/022/pythonDict.txt" md5="867cd09aea06cc009eed7d7b8e731ff0" owner="cviljoen" perm="755" replicated="0" size="532619" turl="alien:///alice/cern.ch/user/c/cviljoen/wd/outDir265377/000265377/022/pythonDict.txt" type="f" />
     </event>
     <event name="23">
-      <file name="pythonDict.txt" aclId="" broken="0" ctime="2019-01-17 08:53:00" dir="30009281" entryId="30009337" expiretime="" gowner="cviljoen" guid="D00D9F1A-1A2C-11E9-A916-93AAB2F6714E" guidtime="11E91A2C" jobid="1363151652" lfn="/alice/cern.ch/user/c/cviljoen/wd/outDir265309/000265309/023/pythonDict.txt" md5="d80e421468965ba1865e8ee1a765e9bb" owner="cviljoen" perm="755" replicated="0" size="718591" turl="alien:///alice/cern.ch/user/c/cviljoen/wd/outDir265309/000265309/023/pythonDict.txt" type="f" />
+      <file name="pythonDict.txt" aclId="" broken="0" ctime="2019-03-08 19:37:45" dir="31672882" entryId="31672885" expiretime="" gowner="cviljoen" guid="41321790-41D1-11E9-9D5A-4387EB59FFD5" guidtime="11E941D1" jobid="1416518857" lfn="/alice/cern.ch/user/c/cviljoen/wd/outDir265377/000265377/023/pythonDict.txt" md5="7a0a2c89f6fce555e576cbe5e33580c1" owner="cviljoen" perm="755" replicated="0" size="633541" turl="alien:///alice/cern.ch/user/c/cviljoen/wd/outDir265377/000265377/023/pythonDict.txt" type="f" />
     </event>
     <event name="24">
-      <file name="pythonDict.txt" aclId="" broken="0" ctime="2019-01-17 08:49:31" dir="30008922" entryId="30009085" expiretime="" gowner="cviljoen" guid="5F2EA974-1A2C-11E9-B18B-1B77D9CFC442" guidtime="11E91A2C" jobid="1363151653" lfn="/alice/cern.ch/user/c/cviljoen/wd/outDir265309/000265309/024/pythonDict.txt" md5="883777ba0b60e73b3952fb0a4a9747c4" owner="cviljoen" perm="755" replicated="0" size="713450" turl="alien:///alice/cern.ch/user/c/cviljoen/wd/outDir265309/000265309/024/pythonDict.txt" type="f" />
+      <file name="pythonDict.txt" aclId="" broken="0" ctime="2019-03-08 21:25:33" dir="31673137" entryId="31673140" expiretime="" gowner="cviljoen" guid="49BFCF10-41E0-11E9-901B-8BC0B9876AE7" guidtime="11E941E0" jobid="1416518858" lfn="/alice/cern.ch/user/c/cviljoen/wd/outDir265377/000265377/024/pythonDict.txt" md5="5b50fb6635a684e0b5472afed7d01767" owner="cviljoen" perm="755" replicated="0" size="660728" turl="alien:///alice/cern.ch/user/c/cviljoen/wd/outDir265377/000265377/024/pythonDict.txt" type="f" />
     </event>
     <event name="25">
-      <file name="pythonDict.txt" aclId="" broken="0" ctime="2019-01-17 08:51:23" dir="30009014" entryId="30009268" expiretime="" gowner="cviljoen" guid="874A47EC-1A2C-11E9-9CB9-9B4B98CB7B15" guidtime="11E91A2C" jobid="1363151654" lfn="/alice/cern.ch/user/c/cviljoen/wd/outDir265309/000265309/025/pythonDict.txt" md5="a214e5d0a47bc42dde8f113dea950019" owner="cviljoen" perm="755" replicated="0" size="719341" turl="alien:///alice/cern.ch/user/c/cviljoen/wd/outDir265309/000265309/025/pythonDict.txt" type="f" />
+      <file name="pythonDict.txt" aclId="" broken="0" ctime="2019-03-08 19:36:45" dir="31672811" entryId="31672850" expiretime="" gowner="cviljoen" guid="1C7DE76C-41D1-11E9-9B93-5751B1E9CC5E" guidtime="11E941D1" jobid="1416518859" lfn="/alice/cern.ch/user/c/cviljoen/wd/outDir265377/000265377/025/pythonDict.txt" md5="002e19f1a1820d84ce7410a3dae770de" owner="cviljoen" perm="755" replicated="0" size="554142" turl="alien:///alice/cern.ch/user/c/cviljoen/wd/outDir265377/000265377/025/pythonDict.txt" type="f" />
     </event>
     <event name="26">
-      <file name="pythonDict.txt" aclId="" broken="0" ctime="2019-01-17 08:52:39" dir="30009057" entryId="30009294" expiretime="" gowner="cviljoen" guid="8D1CE256-1A2C-11E9-A538-FF005EE237B4" guidtime="11E91A2C" jobid="1363151655" lfn="/alice/cern.ch/user/c/cviljoen/wd/outDir265309/000265309/026/pythonDict.txt" md5="a1c8d6e4175d342aea248a8b3c8c00e2" owner="cviljoen" perm="755" replicated="0" size="677723" turl="alien:///alice/cern.ch/user/c/cviljoen/wd/outDir265309/000265309/026/pythonDict.txt" type="f" />
+      <file name="pythonDict.txt" aclId="" broken="0" ctime="2019-03-08 19:38:46" dir="31672910" entryId="31672923" expiretime="" gowner="cviljoen" guid="6507778C-41D1-11E9-B35C-07953BA5E85A" guidtime="11E941D1" jobid="1416518860" lfn="/alice/cern.ch/user/c/cviljoen/wd/outDir265377/000265377/026/pythonDict.txt" md5="225d3846ab2d52e8b68be3791d8a68bb" owner="cviljoen" perm="755" replicated="0" size="545758" turl="alien:///alice/cern.ch/user/c/cviljoen/wd/outDir265377/000265377/026/pythonDict.txt" type="f" />
     </event>
     <event name="27">
-      <file name="pythonDict.txt" aclId="" broken="0" ctime="2019-01-17 08:52:39" dir="30009172" entryId="30009300" expiretime="" gowner="cviljoen" guid="9E69BBC4-1A2C-11E9-B481-9BC93F7768DC" guidtime="11E91A2C" jobid="1363151656" lfn="/alice/cern.ch/user/c/cviljoen/wd/outDir265309/000265309/027/pythonDict.txt" md5="586dee2c785ec4481e1b3a568d1c09c5" owner="cviljoen" perm="755" replicated="0" size="720335" turl="alien:///alice/cern.ch/user/c/cviljoen/wd/outDir265309/000265309/027/pythonDict.txt" type="f" />
+      <file name="pythonDict.txt" aclId="" broken="0" ctime="2019-03-08 19:43:10" dir="31673043" entryId="31673060" expiretime="" gowner="cviljoen" guid="FDD1BF54-41D1-11E9-B346-73F3933551A5" guidtime="11E941D1" jobid="1416518861" lfn="/alice/cern.ch/user/c/cviljoen/wd/outDir265377/000265377/027/pythonDict.txt" md5="049f3b359aecc4fc1823878f2730396a" owner="cviljoen" perm="755" replicated="0" size="531282" turl="alien:///alice/cern.ch/user/c/cviljoen/wd/outDir265377/000265377/027/pythonDict.txt" type="f" />
     </event>
     <event name="28">
-      <file name="pythonDict.txt" aclId="" broken="0" ctime="2019-01-17 08:54:11" dir="30009274" entryId="30009364" expiretime="" gowner="cviljoen" guid="D95EA168-1A2C-11E9-934F-7B65804EAF1B" guidtime="11E91A2C" jobid="1363151657" lfn="/alice/cern.ch/user/c/cviljoen/wd/outDir265309/000265309/028/pythonDict.txt" md5="a9436c13cfceed1d30596ba4a9e81ecc" owner="cviljoen" perm="755" replicated="0" size="710859" turl="alien:///alice/cern.ch/user/c/cviljoen/wd/outDir265309/000265309/028/pythonDict.txt" type="f" />
+      <file name="pythonDict.txt" aclId="" broken="0" ctime="2019-03-08 19:35:44" dir="31672778" entryId="31672782" expiretime="" gowner="cviljoen" guid="F5A1F12E-41D0-11E9-9149-7369CACAB8E4" guidtime="11E941D0" jobid="1416518862" lfn="/alice/cern.ch/user/c/cviljoen/wd/outDir265377/000265377/028/pythonDict.txt" md5="f115a5027e76a3d34e47168bb20ed673" owner="cviljoen" perm="755" replicated="0" size="466937" turl="alien:///alice/cern.ch/user/c/cviljoen/wd/outDir265377/000265377/028/pythonDict.txt" type="f" />
     </event>
     <event name="29">
-      <file name="pythonDict.txt" aclId="" broken="0" ctime="2019-01-17 08:54:20" dir="30009236" entryId="30009382" expiretime="" gowner="cviljoen" guid="D01F38C4-1A2C-11E9-A801-37560B8CB0AB" guidtime="11E91A2C" jobid="1363151658" lfn="/alice/cern.ch/user/c/cviljoen/wd/outDir265309/000265309/029/pythonDict.txt" md5="f9263d31bafec8dccffc934c13e3e091" owner="cviljoen" perm="755" replicated="0" size="663412" turl="alien:///alice/cern.ch/user/c/cviljoen/wd/outDir265309/000265309/029/pythonDict.txt" type="f" />
+      <file name="pythonDict.txt" aclId="" broken="0" ctime="2019-03-08 19:40:08" dir="31672974" entryId="31672983" expiretime="" gowner="cviljoen" guid="93C89880-41D1-11E9-ADCB-5F16C46A7EA5" guidtime="11E941D1" jobid="1416518863" lfn="/alice/cern.ch/user/c/cviljoen/wd/outDir265377/000265377/029/pythonDict.txt" md5="07c9b8b270acde927255949c85b88ca2" owner="cviljoen" perm="755" replicated="0" size="481991" turl="alien:///alice/cern.ch/user/c/cviljoen/wd/outDir265377/000265377/029/pythonDict.txt" type="f" />
     </event>
     <event name="3">
-      <file name="pythonDict.txt" aclId="" broken="0" ctime="2019-01-17 08:15:39" dir="30006472" entryId="30006746" expiretime="" gowner="cviljoen" guid="783531AE-1A27-11E9-B9AE-0F12209E6630" guidtime="11E91A27" jobid="1363151631" lfn="/alice/cern.ch/user/c/cviljoen/wd/outDir265309/000265309/003/pythonDict.txt" md5="f4a5a1f6c6d3df49dd0a7a2a4cae84d7" owner="cviljoen" perm="755" replicated="0" size="724311" turl="alien:///alice/cern.ch/user/c/cviljoen/wd/outDir265309/000265309/003/pythonDict.txt" type="f" />
+      <file name="pythonDict.txt" aclId="" broken="0" ctime="2019-03-08 19:30:28" dir="31672694" entryId="31672704" expiretime="" gowner="cviljoen" guid="3B8403F4-41D0-11E9-97FD-AF576B976A59" guidtime="11E941D0" jobid="1416518837" lfn="/alice/cern.ch/user/c/cviljoen/wd/outDir265377/000265377/003/pythonDict.txt" md5="c5dbf396c3322102ac12ffb0c714e8bb" owner="cviljoen" perm="755" replicated="0" size="25944" turl="alien:///alice/cern.ch/user/c/cviljoen/wd/outDir265377/000265377/003/pythonDict.txt" type="f" />
     </event>
     <event name="30">
-      <file name="pythonDict.txt" aclId="" broken="0" ctime="2019-01-17 08:49:10" dir="30008858" entryId="30009016" expiretime="" gowner="cviljoen" guid="39BC545C-1A2C-11E9-97E3-6392D6A16B13" guidtime="11E91A2C" jobid="1363151659" lfn="/alice/cern.ch/user/c/cviljoen/wd/outDir265309/000265309/030/pythonDict.txt" md5="adafea35eac50ddd99a0a2dadebc9d3b" owner="cviljoen" perm="755" replicated="0" size="597469" turl="alien:///alice/cern.ch/user/c/cviljoen/wd/outDir265309/000265309/030/pythonDict.txt" type="f" />
+      <file name="pythonDict.txt" aclId="" broken="0" ctime="2019-03-08 19:43:10" dir="31673046" entryId="31673066" expiretime="" gowner="cviljoen" guid="FE6B1802-41D1-11E9-B67F-7BDC6E333D9A" guidtime="11E941D1" jobid="1416518864" lfn="/alice/cern.ch/user/c/cviljoen/wd/outDir265377/000265377/030/pythonDict.txt" md5="274765531ccf1fca7d97a2ceb8aaabdc" owner="cviljoen" perm="755" replicated="0" size="569655" turl="alien:///alice/cern.ch/user/c/cviljoen/wd/outDir265377/000265377/030/pythonDict.txt" type="f" />
+    </event>
+    <event name="31">
+      <file name="pythonDict.txt" aclId="" broken="0" ctime="2019-03-08 19:40:59" dir="31672994" entryId="31672996" expiretime="" gowner="cviljoen" guid="B077B27C-41D1-11E9-9EC6-0BFCBC252FAD" guidtime="11E941D1" jobid="1416518865" lfn="/alice/cern.ch/user/c/cviljoen/wd/outDir265377/000265377/031/pythonDict.txt" md5="f9a57becaacb3ed5e5efde7f5213b1eb" owner="cviljoen" perm="755" replicated="0" size="599550" turl="alien:///alice/cern.ch/user/c/cviljoen/wd/outDir265377/000265377/031/pythonDict.txt" type="f" />
+    </event>
+    <event name="32">
+      <file name="pythonDict.txt" aclId="" broken="0" ctime="2019-03-08 19:41:59" dir="31673024" entryId="31673026" expiretime="" gowner="cviljoen" guid="D8DD9E2A-41D1-11E9-8EF2-1FE44AB7CA53" guidtime="11E941D1" jobid="1416518866" lfn="/alice/cern.ch/user/c/cviljoen/wd/outDir265377/000265377/032/pythonDict.txt" md5="5c1e7f4354eef7d5e4fe6d69edd17c42" owner="cviljoen" perm="755" replicated="0" size="549835" turl="alien:///alice/cern.ch/user/c/cviljoen/wd/outDir265377/000265377/032/pythonDict.txt" type="f" />
+    </event>
+    <event name="33">
+      <file name="pythonDict.txt" aclId="" broken="0" ctime="2019-03-08 19:33:48" dir="31672763" entryId="31672765" expiretime="" gowner="cviljoen" guid="AFF9497E-41D0-11E9-8260-A3A34E1622FD" guidtime="11E941D0" jobid="1416518867" lfn="/alice/cern.ch/user/c/cviljoen/wd/outDir265377/000265377/033/pythonDict.txt" md5="e1fce2287e7d9f90c557baeb040ad003" owner="cviljoen" perm="755" replicated="0" size="281255" turl="alien:///alice/cern.ch/user/c/cviljoen/wd/outDir265377/000265377/033/pythonDict.txt" type="f" />
+    </event>
+    <event name="34">
+      <file name="pythonDict.txt" aclId="" broken="0" ctime="2019-03-08 19:35:55" dir="31672780" entryId="31672800" expiretime="" gowner="cviljoen" guid="FBC24A72-41D0-11E9-8CA5-47D252698E64" guidtime="11E941D0" jobid="1416518868" lfn="/alice/cern.ch/user/c/cviljoen/wd/outDir265377/000265377/034/pythonDict.txt" md5="51af7eb937d6ea1a77dd9ede8dc6fdd6" owner="cviljoen" perm="755" replicated="0" size="529087" turl="alien:///alice/cern.ch/user/c/cviljoen/wd/outDir265377/000265377/034/pythonDict.txt" type="f" />
+    </event>
+    <event name="35">
+      <file name="pythonDict.txt" aclId="" broken="0" ctime="2019-03-08 19:36:56" dir="31672841" entryId="31672863" expiretime="" gowner="cviljoen" guid="21FA40DC-41D1-11E9-B2C7-977ADD87125D" guidtime="11E941D1" jobid="1416518869" lfn="/alice/cern.ch/user/c/cviljoen/wd/outDir265377/000265377/035/pythonDict.txt" md5="90d92b56bf8a58e8aaf36700b2cd39ab" owner="cviljoen" perm="755" replicated="0" size="519425" turl="alien:///alice/cern.ch/user/c/cviljoen/wd/outDir265377/000265377/035/pythonDict.txt" type="f" />
+    </event>
+    <event name="36">
+      <file name="pythonDict.txt" aclId="" broken="0" ctime="2019-03-08 19:45:51" dir="31673085" entryId="31673089" expiretime="" gowner="cviljoen" guid="4D1258B2-41D2-11E9-A9E2-A750E851A5C6" guidtime="11E941D2" jobid="1416518870" lfn="/alice/cern.ch/user/c/cviljoen/wd/outDir265377/000265377/036/pythonDict.txt" md5="0879e47c6864d8bee78e8167f8db0016" owner="cviljoen" perm="755" replicated="0" size="676577" turl="alien:///alice/cern.ch/user/c/cviljoen/wd/outDir265377/000265377/036/pythonDict.txt" type="f" />
+    </event>
+    <event name="37">
+      <file name="pythonDict.txt" aclId="" broken="0" ctime="2019-03-08 21:20:41" dir="31673130" entryId="31673132" expiretime="" gowner="cviljoen" guid="9C7DD6EE-41DF-11E9-A7A2-4BBB0364EF74" guidtime="11E941DF" jobid="1416518871" lfn="/alice/cern.ch/user/c/cviljoen/wd/outDir265377/000265377/037/pythonDict.txt" md5="d7707932cccd9ef3ed38a3528c113028" owner="cviljoen" perm="755" replicated="0" size="538867" turl="alien:///alice/cern.ch/user/c/cviljoen/wd/outDir265377/000265377/037/pythonDict.txt" type="f" />
+    </event>
+    <event name="38">
+      <file name="pythonDict.txt" aclId="" broken="0" ctime="2019-03-08 19:40:00" dir="31672973" entryId="31672976" expiretime="" gowner="cviljoen" guid="903CA80A-41D1-11E9-9555-BBACBC7E7325" guidtime="11E941D1" jobid="1416518872" lfn="/alice/cern.ch/user/c/cviljoen/wd/outDir265377/000265377/038/pythonDict.txt" md5="af9fb8afb4478e81c9a78631c044dd17" owner="cviljoen" perm="755" replicated="0" size="637978" turl="alien:///alice/cern.ch/user/c/cviljoen/wd/outDir265377/000265377/038/pythonDict.txt" type="f" />
+    </event>
+    <event name="39">
+      <file name="pythonDict.txt" aclId="" broken="0" ctime="2019-03-08 19:38:57" dir="31672921" entryId="31672947" expiretime="" gowner="cviljoen" guid="6A0AB8F2-41D1-11E9-B105-03890DAC0BB1" guidtime="11E941D1" jobid="1416518873" lfn="/alice/cern.ch/user/c/cviljoen/wd/outDir265377/000265377/039/pythonDict.txt" md5="6dc641c02a9a0e0835571d0d06702af3" owner="cviljoen" perm="755" replicated="0" size="498570" turl="alien:///alice/cern.ch/user/c/cviljoen/wd/outDir265377/000265377/039/pythonDict.txt" type="f" />
     </event>
     <event name="4">
-      <file name="pythonDict.txt" aclId="" broken="0" ctime="2019-01-17 08:10:54" dir="30006079" entryId="30006273" expiretime="" gowner="cviljoen" guid="CE97140A-1A26-11E9-B86A-F3ACB1D4A160" guidtime="11E91A26" jobid="1363151632" lfn="/alice/cern.ch/user/c/cviljoen/wd/outDir265309/000265309/004/pythonDict.txt" md5="3a5401149bd3508d97798e4a1427dcb3" owner="cviljoen" perm="755" replicated="0" size="289269" turl="alien:///alice/cern.ch/user/c/cviljoen/wd/outDir265309/000265309/004/pythonDict.txt" type="f" />
+      <file name="pythonDict.txt" aclId="" broken="0" ctime="2019-03-08 19:36:45" dir="31672808" entryId="31672813" expiretime="" gowner="cviljoen" guid="1A884402-41D1-11E9-8F25-FF6A4F2F449A" guidtime="11E941D1" jobid="1416518838" lfn="/alice/cern.ch/user/c/cviljoen/wd/outDir265377/000265377/004/pythonDict.txt" md5="bd02938bb1c170baeb0f63c9ca5b6f32" owner="cviljoen" perm="755" replicated="0" size="386494" turl="alien:///alice/cern.ch/user/c/cviljoen/wd/outDir265377/000265377/004/pythonDict.txt" type="f" />
+    </event>
+    <event name="40">
+      <file name="pythonDict.txt" aclId="" broken="0" ctime="2019-03-08 19:37:56" dir="31672896" entryId="31672898" expiretime="" gowner="cviljoen" guid="47D7ED72-41D1-11E9-8B54-23EFE8E71E1D" guidtime="11E941D1" jobid="1416518874" lfn="/alice/cern.ch/user/c/cviljoen/wd/outDir265377/000265377/040/pythonDict.txt" md5="f68c63555478908246771de7f6ae15ff" owner="cviljoen" perm="755" replicated="0" size="503377" turl="alien:///alice/cern.ch/user/c/cviljoen/wd/outDir265377/000265377/040/pythonDict.txt" type="f" />
+    </event>
+    <event name="41">
+      <file name="pythonDict.txt" aclId="" broken="0" ctime="2019-03-08 19:32:37" dir="31672737" entryId="31672740" expiretime="" gowner="cviljoen" guid="88AB16F4-41D0-11E9-9372-F7B04151935D" guidtime="11E941D0" jobid="1416518875" lfn="/alice/cern.ch/user/c/cviljoen/wd/outDir265377/000265377/041/pythonDict.txt" md5="76cbc52393762459fdd5c5d2559e2d61" owner="cviljoen" perm="755" replicated="0" size="177387" turl="alien:///alice/cern.ch/user/c/cviljoen/wd/outDir265377/000265377/041/pythonDict.txt" type="f" />
+    </event>
+    <event name="42">
+      <file name="pythonDict.txt" aclId="" broken="0" ctime="2019-03-08 19:32:47" dir="31672738" entryId="31672746" expiretime="" gowner="cviljoen" guid="8D832E0A-41D0-11E9-B424-7B9A33B56679" guidtime="11E941D0" jobid="1416518876" lfn="/alice/cern.ch/user/c/cviljoen/wd/outDir265377/000265377/042/pythonDict.txt" md5="159d431c5366bb3df7724867f915b3f4" owner="cviljoen" perm="755" replicated="0" size="16307" turl="alien:///alice/cern.ch/user/c/cviljoen/wd/outDir265377/000265377/042/pythonDict.txt" type="f" />
+    </event>
+    <event name="43">
+      <file name="pythonDict.txt" aclId="" broken="0" ctime="2019-03-08 19:32:47" dir="31672723" entryId="31672752" expiretime="" gowner="cviljoen" guid="7D117DD8-41D0-11E9-90AA-F704ADD0A5FE" guidtime="11E941D0" jobid="1416518877" lfn="/alice/cern.ch/user/c/cviljoen/wd/outDir265377/000265377/043/pythonDict.txt" md5="7cc4da72f18d7c103a71ad64380f4b3e" owner="cviljoen" perm="755" replicated="0" size="114739" turl="alien:///alice/cern.ch/user/c/cviljoen/wd/outDir265377/000265377/043/pythonDict.txt" type="f" />
+    </event>
+    <event name="44">
+      <file name="pythonDict.txt" aclId="" broken="0" ctime="2019-03-08 20:00:00" dir="31673113" entryId="31673115" expiretime="" gowner="cviljoen" guid="3E3FBC2E-41D4-11E9-BF02-23877F27FC5B" guidtime="11E941D4" jobid="1416518878" lfn="/alice/cern.ch/user/c/cviljoen/wd/outDir265377/000265377/044/pythonDict.txt" md5="695d07f741d105fc1a9ae8b4dc3f7a6c" owner="cviljoen" perm="755" replicated="0" size="16288" turl="alien:///alice/cern.ch/user/c/cviljoen/wd/outDir265377/000265377/044/pythonDict.txt" type="f" />
+    </event>
+    <event name="45">
+      <file name="pythonDict.txt" aclId="" broken="0" ctime="2019-03-08 19:30:28" dir="31672693" entryId="31672710" expiretime="" gowner="cviljoen" guid="3AF438BE-41D0-11E9-8598-4709DE7F32BB" guidtime="11E941D0" jobid="1416518879" lfn="/alice/cern.ch/user/c/cviljoen/wd/outDir265377/000265377/045/pythonDict.txt" md5="798d1941f7349837182e1d0e63d8b4b7" owner="cviljoen" perm="755" replicated="0" size="20943" turl="alien:///alice/cern.ch/user/c/cviljoen/wd/outDir265377/000265377/045/pythonDict.txt" type="f" />
+    </event>
+    <event name="46">
+      <file name="pythonDict.txt" aclId="" broken="0" ctime="2019-03-08 19:35:24" dir="31672770" entryId="31672772" expiretime="" gowner="cviljoen" guid="E48A9F1C-41D0-11E9-B9C9-F3F480342206" guidtime="11E941D0" jobid="1416518880" lfn="/alice/cern.ch/user/c/cviljoen/wd/outDir265377/000265377/046/pythonDict.txt" md5="49d073b1d3189d96f8547ae00f0e1d58" owner="cviljoen" perm="755" replicated="0" size="19655" turl="alien:///alice/cern.ch/user/c/cviljoen/wd/outDir265377/000265377/046/pythonDict.txt" type="f" />
+    </event>
+    <event name="47">
+      <file name="pythonDict.txt" aclId="" broken="0" ctime="2019-03-08 19:32:57" dir="31672730" entryId="31672758" expiretime="" gowner="cviljoen" guid="80AFD50C-41D0-11E9-8E86-DFDF7697BEA4" guidtime="11E941D0" jobid="1416518881" lfn="/alice/cern.ch/user/c/cviljoen/wd/outDir265377/000265377/047/pythonDict.txt" md5="2092df10c9e9e817130394c202db1a41" owner="cviljoen" perm="755" replicated="0" size="71444" turl="alien:///alice/cern.ch/user/c/cviljoen/wd/outDir265377/000265377/047/pythonDict.txt" type="f" />
+    </event>
+    <event name="48">
+      <file name="pythonDict.txt" aclId="" broken="0" ctime="2019-03-08 19:43:01" dir="31673023" entryId="31673048" expiretime="" gowner="cviljoen" guid="EAB5E0A8-41D1-11E9-9F0C-3BDB5D660DF2" guidtime="11E941D1" jobid="1416518882" lfn="/alice/cern.ch/user/c/cviljoen/wd/outDir265377/000265377/048/pythonDict.txt" md5="f85c4b9ab599ec966560821bc882e345" owner="cviljoen" perm="755" replicated="0" size="4835" turl="alien:///alice/cern.ch/user/c/cviljoen/wd/outDir265377/000265377/048/pythonDict.txt" type="f" />
+    </event>
+    <event name="49">
+      <file name="pythonDict.txt" aclId="" broken="0" ctime="2019-03-08 19:31:47" dir="31672721" entryId="31672732" expiretime="" gowner="cviljoen" guid="6699E900-41D0-11E9-B91F-F772365D4EB6" guidtime="11E941D0" jobid="1416518883" lfn="/alice/cern.ch/user/c/cviljoen/wd/outDir265377/000265377/049/pythonDict.txt" md5="0dc06e5389cd21c0cd2b70cb97094e1a" owner="cviljoen" perm="755" replicated="0" size="85421" turl="alien:///alice/cern.ch/user/c/cviljoen/wd/outDir265377/000265377/049/pythonDict.txt" type="f" />
     </event>
     <event name="5">
-      <file name="pythonDict.txt" aclId="" broken="0" ctime="2019-01-17 08:15:49" dir="30006566" entryId="30006766" expiretime="" gowner="cviljoen" guid="824DB940-1A27-11E9-BDAD-CF14903C60EC" guidtime="11E91A27" jobid="1363151633" lfn="/alice/cern.ch/user/c/cviljoen/wd/outDir265309/000265309/005/pythonDict.txt" md5="c83963100e96d225b9a4eb22a749400f" owner="cviljoen" perm="755" replicated="0" size="260708" turl="alien:///alice/cern.ch/user/c/cviljoen/wd/outDir265309/000265309/005/pythonDict.txt" type="f" />
+      <file name="pythonDict.txt" aclId="" broken="0" ctime="2019-03-08 19:39:37" dir="31672952" entryId="31672956" expiretime="" gowner="cviljoen" guid="7FB8BD34-41D1-11E9-9743-5B89508A459B" guidtime="11E941D1" jobid="1416518839" lfn="/alice/cern.ch/user/c/cviljoen/wd/outDir265377/000265377/005/pythonDict.txt" md5="e90e7f039b03aa1a59d610af77b5ca6b" owner="cviljoen" perm="755" replicated="0" size="652791" turl="alien:///alice/cern.ch/user/c/cviljoen/wd/outDir265377/000265377/005/pythonDict.txt" type="f" />
+    </event>
+    <event name="50">
+      <file name="pythonDict.txt" aclId="" broken="0" ctime="2019-03-08 19:35:44" dir="31672777" entryId="31672788" expiretime="" gowner="cviljoen" guid="F5B7AB4A-41D0-11E9-9631-6330856FA5FE" guidtime="11E941D0" jobid="1416518884" lfn="/alice/cern.ch/user/c/cviljoen/wd/outDir265377/000265377/050/pythonDict.txt" md5="bb1d5cf91363e62bcaa8a2e86a6bffb6" owner="cviljoen" perm="755" replicated="0" size="200918" turl="alien:///alice/cern.ch/user/c/cviljoen/wd/outDir265377/000265377/050/pythonDict.txt" type="f" />
+    </event>
+    <event name="51">
+      <file name="pythonDict.txt" aclId="" broken="0" ctime="2019-03-08 19:44:10" dir="31673071" entryId="31673073" expiretime="" gowner="cviljoen" guid="1FD0840A-41D2-11E9-8BEA-53CB12B7D288" guidtime="11E941D2" jobid="1416518885" lfn="/alice/cern.ch/user/c/cviljoen/wd/outDir265377/000265377/051/pythonDict.txt" md5="7079db2a86d1f2fb76273e0c55e31dcd" owner="cviljoen" perm="755" replicated="0" size="635408" turl="alien:///alice/cern.ch/user/c/cviljoen/wd/outDir265377/000265377/051/pythonDict.txt" type="f" />
+    </event>
+    <event name="52">
+      <file name="pythonDict.txt" aclId="" broken="0" ctime="2019-03-08 19:41:30" dir="31673002" entryId="31673011" expiretime="" gowner="cviljoen" guid="BF6C03B4-41D1-11E9-BA58-6F4CB1DEC6C4" guidtime="11E941D1" jobid="1416518886" lfn="/alice/cern.ch/user/c/cviljoen/wd/outDir265377/000265377/052/pythonDict.txt" md5="395e32314d154bfdfc5a7f5bc8a2e48a" owner="cviljoen" perm="755" replicated="0" size="672416" turl="alien:///alice/cern.ch/user/c/cviljoen/wd/outDir265377/000265377/052/pythonDict.txt" type="f" />
+    </event>
+    <event name="53">
+      <file name="pythonDict.txt" aclId="" broken="0" ctime="2019-03-08 21:25:43" dir="31673138" entryId="31673146" expiretime="" gowner="cviljoen" guid="50725ECC-41E0-11E9-A88F-7359BD51D841" guidtime="11E941E0" jobid="1416518887" lfn="/alice/cern.ch/user/c/cviljoen/wd/outDir265377/000265377/053/pythonDict.txt" md5="b11e1a6f2e57c9e54e4301aa17a8fc0a" owner="cviljoen" perm="755" replicated="0" size="513387" turl="alien:///alice/cern.ch/user/c/cviljoen/wd/outDir265377/000265377/053/pythonDict.txt" type="f" />
+    </event>
+    <event name="54">
+      <file name="pythonDict.txt" aclId="" broken="0" ctime="2019-03-08 23:05:56" dir="31673158" entryId="31673160" expiretime="" gowner="cviljoen" guid="52D348D0-41EE-11E9-9D30-9752FE361595" guidtime="11E941EE" jobid="1416518888" lfn="/alice/cern.ch/user/c/cviljoen/wd/outDir265377/000265377/054/pythonDict.txt" md5="17acd3c298786a97603eb034d587cd9e" owner="cviljoen" perm="755" replicated="0" size="618740" turl="alien:///alice/cern.ch/user/c/cviljoen/wd/outDir265377/000265377/054/pythonDict.txt" type="f" />
+    </event>
+    <event name="55">
+      <file name="pythonDict.txt" aclId="" broken="0" ctime="2019-03-08 19:45:51" dir="31673086" entryId="31673095" expiretime="" gowner="cviljoen" guid="55FFDDD2-41D2-11E9-AB06-83613987A5D1" guidtime="11E941D2" jobid="1416518889" lfn="/alice/cern.ch/user/c/cviljoen/wd/outDir265377/000265377/055/pythonDict.txt" md5="917aee39730d3f44d54e14690e888b8a" owner="cviljoen" perm="755" replicated="0" size="648356" turl="alien:///alice/cern.ch/user/c/cviljoen/wd/outDir265377/000265377/055/pythonDict.txt" type="f" />
+    </event>
+    <event name="56">
+      <file name="pythonDict.txt" aclId="" broken="0" ctime="2019-03-08 19:40:28" dir="31672981" entryId="31672989" expiretime="" gowner="cviljoen" guid="9DB1891A-41D1-11E9-9772-9735C320B3E3" guidtime="11E941D1" jobid="1416518890" lfn="/alice/cern.ch/user/c/cviljoen/wd/outDir265377/000265377/056/pythonDict.txt" md5="63308ec305712cfe90c12f28cc3294f0" owner="cviljoen" perm="755" replicated="0" size="593278" turl="alien:///alice/cern.ch/user/c/cviljoen/wd/outDir265377/000265377/056/pythonDict.txt" type="f" />
+    </event>
+    <event name="57">
+      <file name="pythonDict.txt" aclId="" broken="0" ctime="2019-03-08 19:41:30" dir="31673009" entryId="31673017" expiretime="" gowner="cviljoen" guid="C3665032-41D1-11E9-995A-D39375CA0108" guidtime="11E941D1" jobid="1416518891" lfn="/alice/cern.ch/user/c/cviljoen/wd/outDir265377/000265377/057/pythonDict.txt" md5="9faea70c2832ff0ebc1f1c9393e36004" owner="cviljoen" perm="755" replicated="0" size="612577" turl="alien:///alice/cern.ch/user/c/cviljoen/wd/outDir265377/000265377/057/pythonDict.txt" type="f" />
+    </event>
+    <event name="58">
+      <file name="pythonDict.txt" aclId="" broken="0" ctime="2019-03-09 08:19:34" dir="31673165" entryId="31673167" expiretime="" gowner="cviljoen" guid="A668718A-423B-11E9-BF32-AF437A66D3B9" guidtime="11E9423B" jobid="1416518892" lfn="/alice/cern.ch/user/c/cviljoen/wd/outDir265377/000265377/058/pythonDict.txt" md5="54666c42d88202f948bbf39c5ec0c2d5" owner="cviljoen" perm="755" replicated="0" size="682151" turl="alien:///alice/cern.ch/user/c/cviljoen/wd/outDir265377/000265377/058/pythonDict.txt" type="f" />
+    </event>
+    <event name="59">
+      <file name="pythonDict.txt" aclId="" broken="0" ctime="2019-03-08 19:38:05" dir="31672903" entryId="31672905" expiretime="" gowner="cviljoen" guid="4CC63F82-41D1-11E9-A9C2-1F8C5926BFFD" guidtime="11E941D1" jobid="1416518893" lfn="/alice/cern.ch/user/c/cviljoen/wd/outDir265377/000265377/059/pythonDict.txt" md5="2c7536c4f2d33a5a9eb1b9c19cc64ba9" owner="cviljoen" perm="755" replicated="0" size="624713" turl="alien:///alice/cern.ch/user/c/cviljoen/wd/outDir265377/000265377/059/pythonDict.txt" type="f" />
     </event>
     <event name="6">
-      <file name="pythonDict.txt" aclId="" broken="0" ctime="2019-01-17 08:02:48" dir="30005869" entryId="30005900" expiretime="" gowner="cviljoen" guid="CFFA8738-1A25-11E9-AD9E-F7CBF27271C8" guidtime="11E91A25" jobid="1363151634" lfn="/alice/cern.ch/user/c/cviljoen/wd/outDir265309/000265309/006/pythonDict.txt" md5="0c4cffe1863b063ac40d1a6d84d451ac" owner="cviljoen" perm="755" replicated="0" size="25427" turl="alien:///alice/cern.ch/user/c/cviljoen/wd/outDir265309/000265309/006/pythonDict.txt" type="f" />
+      <file name="pythonDict.txt" aclId="" broken="0" ctime="2019-03-08 20:03:49" dir="31673120" entryId="31673122" expiretime="" gowner="cviljoen" guid="E145D336-41D4-11E9-927E-EF98150838DB" guidtime="11E941D4" jobid="1416518840" lfn="/alice/cern.ch/user/c/cviljoen/wd/outDir265377/000265377/006/pythonDict.txt" md5="96e714ddc60aa85103d0cf654fb50182" owner="cviljoen" perm="755" replicated="0" size="580629" turl="alien:///alice/cern.ch/user/c/cviljoen/wd/outDir265377/000265377/006/pythonDict.txt" type="f" />
+    </event>
+    <event name="60">
+      <file name="pythonDict.txt" aclId="" broken="0" ctime="2019-03-08 19:37:15" dir="31672868" entryId="31672871" expiretime="" gowner="cviljoen" guid="2CF625F0-41D1-11E9-84C3-73315FD63683" guidtime="11E941D1" jobid="1416518894" lfn="/alice/cern.ch/user/c/cviljoen/wd/outDir265377/000265377/060/pythonDict.txt" md5="84171e0a62f23e81b466e8ff25dbb86b" owner="cviljoen" perm="755" replicated="0" size="545119" turl="alien:///alice/cern.ch/user/c/cviljoen/wd/outDir265377/000265377/060/pythonDict.txt" type="f" />
+    </event>
+    <event name="61">
+      <file name="pythonDict.txt" aclId="" broken="0" ctime="2019-03-08 19:37:26" dir="31672869" entryId="31672877" expiretime="" gowner="cviljoen" guid="3180B2A2-41D1-11E9-B0C1-D3FCE926866D" guidtime="11E941D1" jobid="1416518895" lfn="/alice/cern.ch/user/c/cviljoen/wd/outDir265377/000265377/061/pythonDict.txt" md5="6ff1ef1d0d7ba40b835c5d7c7b422027" owner="cviljoen" perm="755" replicated="0" size="634918" turl="alien:///alice/cern.ch/user/c/cviljoen/wd/outDir265377/000265377/061/pythonDict.txt" type="f" />
+    </event>
+    <event name="62">
+      <file name="pythonDict.txt" aclId="" broken="0" ctime="2019-03-08 19:51:13" dir="31673106" entryId="31673108" expiretime="" gowner="cviljoen" guid="2024D5FE-41D3-11E9-A42D-6B37163D598B" guidtime="11E941D3" jobid="1416518896" lfn="/alice/cern.ch/user/c/cviljoen/wd/outDir265377/000265377/062/pythonDict.txt" md5="4f3f1defbe52a9d766d593f9f27611e8" owner="cviljoen" perm="755" replicated="0" size="609312" turl="alien:///alice/cern.ch/user/c/cviljoen/wd/outDir265377/000265377/062/pythonDict.txt" type="f" />
+    </event>
+    <event name="63">
+      <file name="pythonDict.txt" aclId="" broken="0" ctime="2019-03-08 19:45:51" dir="31673087" entryId="31673101" expiretime="" gowner="cviljoen" guid="5CC8A82E-41D2-11E9-86DA-BB79BFE9F7FD" guidtime="11E941D2" jobid="1416518897" lfn="/alice/cern.ch/user/c/cviljoen/wd/outDir265377/000265377/063/pythonDict.txt" md5="5226054489b1d21f366ed2af6b4f7d1a" owner="cviljoen" perm="755" replicated="0" size="603630" turl="alien:///alice/cern.ch/user/c/cviljoen/wd/outDir265377/000265377/063/pythonDict.txt" type="f" />
+    </event>
+    <event name="64">
+      <file name="pythonDict.txt" aclId="" broken="0" ctime="2019-03-08 19:42:50" dir="31673037" entryId="31673040" expiretime="" gowner="cviljoen" guid="EFD67F7A-41D1-11E9-B2B5-932ECC22B249" guidtime="11E941D1" jobid="1416518898" lfn="/alice/cern.ch/user/c/cviljoen/wd/outDir265377/000265377/064/pythonDict.txt" md5="b6ec909a0de631c65a7714a24aff50cd" owner="cviljoen" perm="755" replicated="0" size="591198" turl="alien:///alice/cern.ch/user/c/cviljoen/wd/outDir265377/000265377/064/pythonDict.txt" type="f" />
+    </event>
+    <event name="65">
+      <file name="pythonDict.txt" aclId="" broken="0" ctime="2019-03-08 19:43:01" dir="31673038" entryId="31673054" expiretime="" gowner="cviljoen" guid="F77B0282-41D1-11E9-A695-3720AE11EA63" guidtime="11E941D1" jobid="1416518899" lfn="/alice/cern.ch/user/c/cviljoen/wd/outDir265377/000265377/065/pythonDict.txt" md5="cf06bd3694c621539427ab4f61de6d4d" owner="cviljoen" perm="755" replicated="0" size="642820" turl="alien:///alice/cern.ch/user/c/cviljoen/wd/outDir265377/000265377/065/pythonDict.txt" type="f" />
+    </event>
+    <event name="66">
+      <file name="pythonDict.txt" aclId="" broken="0" ctime="2019-03-08 19:42:09" dir="31673022" entryId="31673032" expiretime="" gowner="cviljoen" guid="D76F42F0-41D1-11E9-BE42-37076D576B0A" guidtime="11E941D1" jobid="1416518900" lfn="/alice/cern.ch/user/c/cviljoen/wd/outDir265377/000265377/066/pythonDict.txt" md5="68b68d2f4766d761a9af456c1af1fef5" owner="cviljoen" perm="755" replicated="0" size="567153" turl="alien:///alice/cern.ch/user/c/cviljoen/wd/outDir265377/000265377/066/pythonDict.txt" type="f" />
+    </event>
+    <event name="67">
+      <file name="pythonDict.txt" aclId="" broken="0" ctime="2019-03-08 19:39:49" dir="31672953" entryId="31672968" expiretime="" gowner="cviljoen" guid="84DA69CA-41D1-11E9-B377-8F2236487455" guidtime="11E941D1" jobid="1416518901" lfn="/alice/cern.ch/user/c/cviljoen/wd/outDir265377/000265377/067/pythonDict.txt" md5="68e852cfcb0a49bf56f2d72bd8cb63b4" owner="cviljoen" perm="755" replicated="0" size="628711" turl="alien:///alice/cern.ch/user/c/cviljoen/wd/outDir265377/000265377/067/pythonDict.txt" type="f" />
+    </event>
+    <event name="68">
+      <file name="pythonDict.txt" aclId="" broken="0" ctime="2019-03-08 19:44:41" dir="31673078" entryId="31673080" expiretime="" gowner="cviljoen" guid="32F2E370-41D2-11E9-86C2-EFAA4DADE0DF" guidtime="11E941D2" jobid="1416518902" lfn="/alice/cern.ch/user/c/cviljoen/wd/outDir265377/000265377/068/pythonDict.txt" md5="cf2d035d32cc859d0888ff9aeeb89414" owner="cviljoen" perm="755" replicated="0" size="577742" turl="alien:///alice/cern.ch/user/c/cviljoen/wd/outDir265377/000265377/068/pythonDict.txt" type="f" />
+    </event>
+    <event name="69">
+      <file name="pythonDict.txt" aclId="" broken="0" ctime="2019-03-08 21:26:44" dir="31673151" entryId="31673153" expiretime="" gowner="cviljoen" guid="783CE292-41E0-11E9-A1BB-CBDADE9C3110" guidtime="11E941E0" jobid="1416518903" lfn="/alice/cern.ch/user/c/cviljoen/wd/outDir265377/000265377/069/pythonDict.txt" md5="75a40c007d15fcd56418cf8c41742534" owner="cviljoen" perm="755" replicated="0" size="698365" turl="alien:///alice/cern.ch/user/c/cviljoen/wd/outDir265377/000265377/069/pythonDict.txt" type="f" />
     </event>
     <event name="7">
-      <file name="pythonDict.txt" aclId="" broken="0" ctime="2019-01-17 20:09:48" dir="30015144" entryId="30015204" expiretime="" gowner="cviljoen" guid="6BAF2A98-1A8B-11E9-BEE6-5BC67996758D" guidtime="11E91A8B" jobid="1363151635" lfn="/alice/cern.ch/user/c/cviljoen/wd/outDir265309/000265309/007/pythonDict.txt" md5="66288ea160ade1b335038b46c1077e59" owner="cviljoen" perm="755" replicated="0" size="606359" turl="alien:///alice/cern.ch/user/c/cviljoen/wd/outDir265309/000265309/007/pythonDict.txt" type="f" />
+      <file name="pythonDict.txt" aclId="" broken="0" ctime="2019-03-08 19:30:37" dir="31672696" entryId="31672716" expiretime="" gowner="cviljoen" guid="41AB4102-41D0-11E9-AB3B-5FF50B0FF702" guidtime="11E941D0" jobid="1416518841" lfn="/alice/cern.ch/user/c/cviljoen/wd/outDir265377/000265377/007/pythonDict.txt" md5="4d1dd833aa5f7d53a8a1a7a5008ed32e" owner="cviljoen" perm="755" replicated="0" size="14663" turl="alien:///alice/cern.ch/user/c/cviljoen/wd/outDir265377/000265377/007/pythonDict.txt" type="f" />
+    </event>
+    <event name="70">
+      <file name="pythonDict.txt" aclId="" broken="0" ctime="2019-03-09 10:16:17" dir="31672685" entryId="31673174" expiretime="" gowner="cviljoen" guid="FC3E37C4-424B-11E9-A399-1F2BB8CDAC45" guidtime="11E9424B" jobid="1416992484" lfn="/alice/cern.ch/user/c/cviljoen/wd/outDir265377/000265377/pythonDict.txt" md5="cbb184dd8e05c9709e5dcaedaa0495cf" owner="cviljoen" perm="755" replicated="0" size="1" turl="alien:///alice/cern.ch/user/c/cviljoen/wd/outDir265377/000265377/pythonDict.txt" type="f" />
     </event>
     <event name="8">
-      <file name="pythonDict.txt" aclId="" broken="0" ctime="2019-01-17 08:12:14" dir="30006256" entryId="30006453" expiretime="" gowner="cviljoen" guid="087C9D98-1A27-11E9-9FAB-13A80CD4E5BD" guidtime="11E91A27" jobid="1363151636" lfn="/alice/cern.ch/user/c/cviljoen/wd/outDir265309/000265309/008/pythonDict.txt" md5="cd470e16b405bff21fe1bd6056a6a32a" owner="cviljoen" perm="755" replicated="0" size="386460" turl="alien:///alice/cern.ch/user/c/cviljoen/wd/outDir265309/000265309/008/pythonDict.txt" type="f" />
+      <file name="pythonDict.txt" aclId="" broken="0" ctime="2019-03-08 19:35:45" dir="31672779" entryId="31672794" expiretime="" gowner="cviljoen" guid="F8C03A6E-41D0-11E9-83EF-A34C79EBB759" guidtime="11E941D0" jobid="1416518842" lfn="/alice/cern.ch/user/c/cviljoen/wd/outDir265377/000265377/008/pythonDict.txt" md5="c5fb01de996e873d9afcc21f587a0ddc" owner="cviljoen" perm="755" replicated="0" size="398356" turl="alien:///alice/cern.ch/user/c/cviljoen/wd/outDir265377/000265377/008/pythonDict.txt" type="f" />
     </event>
     <event name="9">
-      <file name="pythonDict.txt" aclId="" broken="0" ctime="2019-01-17 08:06:21" dir="30005931" entryId="30006049" expiretime="" gowner="cviljoen" guid="110D0C46-1A26-11E9-90B6-735DBA6D880E" guidtime="11E91A26" jobid="1363151637" lfn="/alice/cern.ch/user/c/cviljoen/wd/outDir265309/000265309/009/pythonDict.txt" md5="91bb6ede190fc16f2799e37ec0b96859" owner="cviljoen" perm="755" replicated="0" size="155521" turl="alien:///alice/cern.ch/user/c/cviljoen/wd/outDir265309/000265309/009/pythonDict.txt" type="f" />
+      <file name="pythonDict.txt" aclId="" broken="0" ctime="2019-03-08 19:36:56" dir="31672855" entryId="31672857" expiretime="" gowner="cviljoen" guid="232F6022-41D1-11E9-9C06-EB8A00B9452E" guidtime="11E941D1" jobid="1416518843" lfn="/alice/cern.ch/user/c/cviljoen/wd/outDir265377/000265377/009/pythonDict.txt" md5="be6289d837478d4db6205a167ada992b" owner="cviljoen" perm="755" replicated="0" size="654016" turl="alien:///alice/cern.ch/user/c/cviljoen/wd/outDir265377/000265377/009/pythonDict.txt" type="f" />
     </event>
-    <info command="[/alice/cern.ch/user/s/skundu/RSNpackage/data/kINT7spin_allignment/pp13/track/phi/dcaz/]: find -z -x allfiles /alice/cern.ch/user/c/cviljoen/wd/outDir265309 *.txt" creator="admin" date="Sun Mar  3 13:48:18 CET 2019" timestamp="1551617298" />
+    <info command="[/alice/cern.ch/user/h/hosokawa/work/ppMC/DetResponse_LHC16h3_lpt5_HIR_ESD/Bin20/]: find -z -x allfiles /alice/cern.ch/user/c/cviljoen/wd/outDir265377/ pythonDict.txt" creator="admin" date="Sat Mar  9 16:07:34 CET 2019" timestamp="1552144054" />
   </collection>
 </alien>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
