@@ -56,8 +56,8 @@ ClassImp(AliTRDdigitsExtract)
 
 //________________________________________________________________________
 AliTRDdigitsExtract::AliTRDdigitsExtract(const char *name)
-: AliTRDdigitsTask(name),
- fPIDResponse(0)//, runNumber(0)
+: AliTRDdigitsTask(name), 
+ fPIDResponse(0)
 {
   // Constructor
 
@@ -81,20 +81,16 @@ AliTRDdigitsExtract::AliTRDdigitsExtract(const char *name)
 void AliTRDdigitsExtract::UserCreateOutputObjects()
 {
   fEventNoInFile = -1;
-
+    
   ofstream ofile;
   ofile.open("pythonDict.txt", ios::app);
-  //ofile.open("dat.csv", ios::app);
   if (!ofile.is_open()) {
     printf("ERROR: Could not open output file (pythonDict.txt).");
   }
-  //TODO: insert csv headers
-//fuck this bracket
-  //ofile << "{";
-
   ofile << "{";
-
   ofile.close();
+
+  cout << "fV0cuts: " << fV0cuts << endl;
 
   fV0cuts = new AliESDv0KineCuts();
 
@@ -104,50 +100,42 @@ void AliTRDdigitsExtract::UserCreateOutputObjects()
   // create list for output (QA) stuff
   fOutputList = new TList();
   fOutputList->SetOwner(kTRUE);
-
+  
   // some histograms
-  //hist elec pt
   TH1F* fhpte = new TH1F("fhpte","fhpte",1000,0.,20.);
-  //hist pion pt
   TH1F* fhptp = new TH1F("fhptp","fhptp",1000,0,20);
-  ////hist elec pt in trd
   TH1F* fhptTRDe = new TH1F("fhptTRDe","fhptTRDe",1000,0,20);
-  //hist pion pt in trd
   TH1F* fhptTRDp = new TH1F("fhptTRDp","fhptTRDp",1000,0,20);
-  //hist number of sigmas above electron bethe bloch
   TH1F* fhsigmae = new TH1F("fhsigmae","fhsigmae",480,-6,6);
-  //hist number of sigmas above pion bethe bloch (is this just for pions or all particles?)
   TH1F* fhsigmap = new TH1F("fhsigmap","fhsigmap",480,-6,6);
-  //overall bethe bloch
-  TH2* fhdEdx = new TH2F("fhdEdx","fhdEdx",20000,0,20,20000,0,400);
-
+  TH2* fhdEdx = new TH2F("fhdEdx","fhdEdx",20000,0,20,20000,0,400);    
+    
   // for simga electron
-  //is this sigma above bethe bloch for different pt bins?
   TH1F* fhtmpe1 = new TH1F("fhsige1","fhsige1",500,-10,10);
   TH1F* fhtmpe2 = new TH1F("fhsige2","fhsige2",500,-10,10);
   TH1F* fhtmpe3 = new TH1F("fhsige3","fhsige3",500,-10,10);
   TH1F* fhtmpe4 = new TH1F("fhsige4","fhsige4",500,-10,10);
   TH1F* fhtmpe5 = new TH1F("fhsige5","fhsige5",500,-10,10);
-
+  
   TH1F* fhtmpp1 = new TH1F("fhsigp1","fhsigp1",500,-8,12);
   TH1F* fhtmpp2 = new TH1F("fhsigp2","fhsigp2",50,-8,12);
   TH1F* fhtmpp3 = new TH1F("fhsigp3","fhsigp3",500,-8,12);
   TH1F* fhtmpp4 = new TH1F("fhsigp4","fhsigp4",500,-8,12);
   TH1F* fhtmpp5 = new TH1F("fhsigp5","fhsigp5",500,-8,12);
-
-  // only one particle at a time
+  
+  // only one particle at a time 
   TH1F* fhsigmae1 = new TH1F("fhsigmae1","fhsigmae1",500,-10,10);
   TH1F* fhsigmae2 = new TH1F("fhsigmae2","fhsigmae2",500,-10,10);
   TH1F* fhsigmae3 = new TH1F("fhsigmae3","fhsigmae3",500,-10,10);
   TH1F* fhsigmae4 = new TH1F("fhsigmae4","fhsigmae4",500,-10,10);
   TH1F* fhsigmae5 = new TH1F("fhsigmae5","fhsigmae5",500,-10,10);
-
+  
   TH1F* fhsigmap1 = new TH1F("fhsigmap1","fhsigmap1",500,-8,12);
   TH1F* fhsigmap2 = new TH1F("fhsigmap2","fhsigmap2",500,-8,12);
   TH1F* fhsigmap3 = new TH1F("fhsigmap3","fhsigmap3",500,-8,12);
   TH1F* fhsigmap4 = new TH1F("fhsigmap4","fhsigmap4",500,-8,12);
   TH1F* fhsigmap5 = new TH1F("fhsigmap5","fhsigmap5",500,-8,12);
-
+  
 
   fOutputList->Add(fhtmpe1);
   fOutputList->Add(fhtmpe2);
@@ -179,19 +167,13 @@ void AliTRDdigitsExtract::UserCreateOutputObjects()
   fOutputList->Add(fhptTRDp);
   fOutputList->Add(fhsigmae);
   fOutputList->Add(fhsigmap);
-
-  fOutputList->Add(fhdEdx);
+  
+  fOutputList->Add(fhdEdx); 
 
   AliAnalysisManager *man = AliAnalysisManager::GetAnalysisManager();
   if (man){
     AliInputEventHandler* inputHandler = (AliInputEventHandler*)(man->GetInputEventHandler());
-    if (inputHandler)fPIDResponse = inputHandler->GetPIDResponse();
-
-    //{
-
-      //const AliVEvent* eventx = inputHandler->GetEvent();
-      //Int_t runNumber = eventx->GetRunNumber();
-    //}
+    if (inputHandler) fPIDResponse = inputHandler->GetPIDResponse();
   }
   //cout << "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ pre post data ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~" << endl;
   PostData(1, fOutputList);
@@ -212,10 +194,7 @@ void AliTRDdigitsExtract::UserExec(Option_t *)
   NextEvent();
   // -----------------------------------------------------------------
   // -----------------------------------------------------------------
-
-//should we be implementing this?
-
-
+ 
   // Skip processing of event if no digits are available
   //if ( ! ReadDigits() ) {
   //  cout << "no digits found, skipping event" << endl;
@@ -224,14 +203,12 @@ void AliTRDdigitsExtract::UserExec(Option_t *)
 
   // Main loop
   // Called for each event
-
+  
   // -----------------------------------------------------------------
   // prepare event data structures
-
   fESD = dynamic_cast<AliESDEvent*>(InputEvent());
-
-
    //esdfriend->Print();
+  cout << "this is an experiment " << dynamic_cast<AliESDEvent*>(InputEvent()) << endl;
    //else { cout << "the trees are awakening" << endl; }
   if (!fESD) {
     printf("ERROR: fESD not available\n");
@@ -239,35 +216,31 @@ void AliTRDdigitsExtract::UserExec(Option_t *)
   }
 
   printf("There are %d tracks in this event\n", fESD->GetNumberOfTracks());
-
+  
   if (fESD->GetNumberOfTracks() <= 0) {
     // skip empty event
     return;
   }
 
-
-
   // make digits available
+  cout << "let's see if this works out" << endl;
   //ReadDigit();
   //AliTRDdigitsTask::ReadDigits();
-   // BASE ROOT CLASS: Reads the digits arrays from the ddl file:
   ReadDigits();
 
   // create reference data samples
-  //BASE ROOT CLASS: fills a list of V0's that have passed kinematic cuts
   FillV0PIDlist();
 
   if (!fV0tags) {
+    cout << "No V0 tags found?!?" << endl;
     return;
   }
-
-//this happens in the void AliTRDdigitsExtract::AnalyseEvent() class below
+  
   AnalyseEvent();
-//upon completion of opening the file, reading its digits and running th
-//tasks in the analysis class, post the data to the outputlist
+  
   PostData(1, fOutputList);
 }
-
+ 
 
 
 
@@ -275,7 +248,7 @@ void AliTRDdigitsExtract::AnalyseEvent()
 {
 
   // make histograms from output list available
-
+  
   TH1* fhpte = (TH1*)fOutputList->FindObject("fhpte");
   TH1* fhptp = (TH1*)fOutputList->FindObject("fhptp");
   TH1* fhptTRDp = (TH1*)fOutputList->FindObject("fhptTRDp");
@@ -284,7 +257,7 @@ void AliTRDdigitsExtract::AnalyseEvent()
 
  TH1* fhsigmap = (TH1*)fOutputList->FindObject("fhsigmap");
   TH2* fhdEdx = (TH2*)fOutputList->FindObject("fhdEdx");
-  //TList* fhel = (TList*)fOutputList->FindObject
+  //TList* fhel = (TList*)fOutputList->FindObject 
   TH1F* fhsige1 = (TH1F*)fOutputList->FindObject("fhsige1");
   TH1F* fhsige2 = (TH1F*)fOutputList->FindObject("fhsige2");
   TH1F* fhsige3 = (TH1F*)fOutputList->FindObject("fhsige3");
@@ -310,64 +283,45 @@ void AliTRDdigitsExtract::AnalyseEvent()
   TH1F* fhsigmap5 = (TH1F*)fOutputList->FindObject("fhsigmap5");
   // yes there are alot of them
 
-//reset PT
-  Float_t pt = 0;
-  //get the number of tracks contained in the ESD
-  Int_t nTracks = fESD->GetNumberOfTracks();
+  Int_t pt = 0;
   // loop over tracks
-
-
-for(Int_t i=0; i < nTracks; i++) {
-//get the specific track
+  Int_t nTracks = fESD->GetNumberOfTracks();
+  for(Int_t i=0; i < nTracks; i++) {
+  
     AliESDtrack* track = fESD->GetTrack(i);
-    //bethe bloch is filled as dE\dx, which is the tpc signal,
-    //plotted as a function of its momentum:
-    fhdEdx->Fill(track->P(), track->GetTPCsignal());
+    fhdEdx->Fill(track->P(), track->GetTPCsignal());  
 
     // only analyse tagged tracks
-    //so only tracks that arise from a v0?
     if (fV0tags[i] == 0) continue;
-//save the track's PT
+    
     pt = track->P();
-
-//the PDG code for an electron is 11
+      
     if ( abs(fV0tags[i]) == 11) {
       fhpte->Fill(track->P());
-      pt = (Float_t)track->P();
+      pt = (Int_t)track->P();
       fhsigmae->Fill(fPIDResponse->NumberOfSigmasTPC(track, AliPID::kElectron));  // only sigma
       // sigma on different GeV
-
+      
       // on the electron line
-      if (pt >= 1 && pt < 2){
-        /*fhsige1->Fill(fPIDResponse->NumberOfSigmasTPC(track, AliPID::kElectron));*/
-        fhsigmae1->Fill(fPIDResponse->NumberOfSigmasTPC(track, AliPID::kElectron));}
-      if (pt >= 2 && pt < 3){
-        /*fhsige2->Fill(fPIDResponse->NumberOfSigmasTPC(track, AliPID::kElectron));*/
-        fhsigmae2->Fill(fPIDResponse->NumberOfSigmasTPC(track, AliPID::kElectron));}
-      if (pt >= 3 && pt < 4){
-        /*fhsige3->Fill(fPIDResponse->NumberOfSigmasTPC(track, AliPID::kElectron));*/
-        fhsigmae3->Fill(fPIDResponse->NumberOfSigmasTPC(track, AliPID::kElectron));}
-      if (pt >= 4 && pt < 5){
-        /*fhsige4->Fill(fPIDResponse->NumberOfSigmasTPC(track, AliPID::kElectron));*/
-        fhsigmae4->Fill(fPIDResponse->NumberOfSigmasTPC(track, AliPID::kElectron));}
-      if (pt >= 5 && pt < 6){
-        /*fhsige5->Fill(fPIDResponse->NumberOfSigmasTPC(track, AliPID::kElectron));*/
-        fhsigmae5->Fill(fPIDResponse->NumberOfSigmasTPC(track, AliPID::kElectron));}
-
+      if (pt >= 1 && pt < 2){ /*fhsige1->Fill(fPIDResponse->NumberOfSigmasTPC(track, AliPID::kElectron));*/ fhsigmae1->Fill(fPIDResponse->NumberOfSigmasTPC(track, AliPID::kElectron));}
+      if (pt >= 2 && pt < 3){ /*fhsige2->Fill(fPIDResponse->NumberOfSigmasTPC(track, AliPID::kElectron));*/ fhsigmae2->Fill(fPIDResponse->NumberOfSigmasTPC(track, AliPID::kElectron));}
+      if (pt >= 3 && pt < 4){ /*fhsige3->Fill(fPIDResponse->NumberOfSigmasTPC(track, AliPID::kElectron));*/ fhsigmae3->Fill(fPIDResponse->NumberOfSigmasTPC(track, AliPID::kElectron));}
+      if (pt >= 4 && pt < 5){ /*fhsige4->Fill(fPIDResponse->NumberOfSigmasTPC(track, AliPID::kElectron));*/ fhsigmae4->Fill(fPIDResponse->NumberOfSigmasTPC(track, AliPID::kElectron));}
+      if (pt >= 5 && pt < 6){ /*fhsige5->Fill(fPIDResponse->NumberOfSigmasTPC(track, AliPID::kElectron));*/ fhsigmae5->Fill(fPIDResponse->NumberOfSigmasTPC(track, AliPID::kElectron));}
+      
       // on the pion line
       if (pt >= 1 && pt < 2){ fhsigp1->Fill(fPIDResponse->NumberOfSigmasTPC(track, AliPID::kPion));}
       if (pt >= 2 && pt < 3){ fhsigp2->Fill(fPIDResponse->NumberOfSigmasTPC(track, AliPID::kPion));}
       if (pt >= 3 && pt < 4){ fhsigp3->Fill(fPIDResponse->NumberOfSigmasTPC(track, AliPID::kPion));}
       if (pt >= 4 && pt < 5){ fhsigp4->Fill(fPIDResponse->NumberOfSigmasTPC(track, AliPID::kPion));}
       if (pt >= 5 && pt < 6){ fhsigp5->Fill(fPIDResponse->NumberOfSigmasTPC(track, AliPID::kPion));}
-
+ 
       //fhcompe->Fill(pt);
 
-
+         
     }
-    //pion pdg code is 211
     if ( abs(fV0tags[i]) == 211 ) {
-      fhptp->Fill(track->P());
+      fhptp->Fill(track->P()); 
       fhsigmap->Fill(fPIDResponse->NumberOfSigmasTPC(track, AliPID::kPion)); // only sigma
       // sigma on different GeV
 
@@ -384,61 +338,61 @@ for(Int_t i=0; i < nTracks; i++) {
       if (pt >= 3 && pt < 4){ fhsigp3->Fill(fPIDResponse->NumberOfSigmasTPC(track, AliPID::kPion)); fhsigmap3->Fill(fPIDResponse->NumberOfSigmasTPC(track, AliPID::kPion));}
       if (pt >= 4 && pt < 5){ fhsigp4->Fill(fPIDResponse->NumberOfSigmasTPC(track, AliPID::kPion)); fhsigmap4->Fill(fPIDResponse->NumberOfSigmasTPC(track, AliPID::kPion));}
       if (pt >= 5 && pt < 6){ fhsigp5->Fill(fPIDResponse->NumberOfSigmasTPC(track, AliPID::kPion)); fhsigmap5->Fill(fPIDResponse->NumberOfSigmasTPC(track, AliPID::kPion));}
-
-    }
-
+      
+    }   
+       
      // for particles with digits
-     //here we are intereted in all particles regardless of V0
     if (ReadDigits()) {
-
+	cout << "has digits" << endl;
       if ( abs(fV0tags[i]) == 11 ) {
-	fhptTRDe->Fill(track->P());
-
-      }
+	fhptTRDe->Fill(track->P());	
+        
+      } 
       if ( abs(fV0tags[i]) == 211 ) {
 	fhptTRDp->Fill(track->P());
       }
-    }else {cout << "this goes off" << endl;} //what is this? particles that are neither pion or electron?
-
+    }else {cout << "this goes off" << endl;}
+   
   }
 }
 
 //______________________________________________________________________________
 void AliTRDdigitsExtract::FillV0PIDlist(){
 
+  cout << "entering FillV0PIDlist" << endl;
+    
   // no need to run if the V0 cuts are not set
-  //but do we need to set them?
   if (!fV0cuts) {
+    cout << "FillV0PIDlist: skip event - no V0 cuts" << endl;
     return;
   }
-
+  
   // basic sanity check...
   if (!fESD) {
+    cout << "FillV0PIDlist: skip event - no ESD event" << endl;
     return;
   }
 
   const Int_t numTracks = fESD->GetNumberOfTracks();
-
+  
   if (numTracks < 0) {
     AliFatal("negative number of tracks?!?");
   }
-
+   
   // Ensure there is sufficient memory for the V0 tags
   if (!fV0tags) {
-    //bracket notation is used to specify an array of size x in brackets,
-    //here array of size number of tracks
+    cout << "FillV0PIDlist: create fV0tags" << endl;
     fV0tags = new Int_t[numTracks];
-    //if there are less v0 tags than the amount of tracks then create a new array
   }else if ( sizeof(fV0tags)/sizeof(Int_t) < numTracks ) {
     cout << "FillV0PIDlist: re-create fV0tags" << endl;
     delete fV0tags;
     fV0tags = new Int_t[numTracks];
-  }
+  } 
   else {
     // there is more than enough space to store the tags, no need to
     // do anything.
   }
-
+  
   // Reset the V0 tags and reference particle arrays
   for (Int_t i = 0; i < numTracks; i++) {
     fV0tags[i] = 0;
@@ -447,33 +401,27 @@ void AliTRDdigitsExtract::FillV0PIDlist(){
   fV0electrons->Clear();
   fV0pions->Clear();
 
-
+  
   // V0 selection
-
+  // loop over V0 particles
   fV0cuts->SetEvent(fESD);
 
-// loop over V0 particles
+
   for(Int_t iv0=0; iv0<fESD->GetNumberOfV0s();iv0++){
-
+    
     AliESDv0 *v0 = (AliESDv0 *) fESD->GetV0(iv0);
-
+    
     if(!v0) continue;
-    //what is on fly status?
     if(v0->GetOnFlyStatus()) continue;
 
     // Get the particle selection
     Bool_t foundV0 = kFALSE;
     Int_t pdgV0, pdgP, pdgN;
-
-//here we get the v0's pdg code, the positive and negative track's pdg code emanating from v0
-
     foundV0 = fV0cuts->ProcessV0(v0, pdgV0, pdgP, pdgN);
     if(!foundV0) continue;
 
     Int_t iTrackP = v0->GetPindex();  // positive track inded
     Int_t iTrackN = v0->GetNindex();  // negative track
-
-//think this probably checks if there is already v0 tags for this track
 
     if (fV0tags[iTrackP]) {
       printf("Warning: particle %d tagged more than once\n", iTrackP);
@@ -482,16 +430,12 @@ void AliTRDdigitsExtract::FillV0PIDlist(){
     if (fV0tags[iTrackN]) {
       printf("Warning: particle %d tagged more than once\n", iTrackN);
     }
-
-
+ 
+   
     // fill the Object arrays
     // positive particles
-    // a negative electron is positive
     if( pdgP == -11){
       AliESDtrack* track = fESD->GetTrack(iTrackP);
-
-//digits dictionary is defined in the next class down below:
-
       DigitsDictionary(track, iv0, iTrackP, iv0, pdgP);
       fV0electrons->Add(fESD->GetTrack(iTrackP));
       fV0tags[iTrackP] = pdgP;
@@ -522,49 +466,40 @@ void AliTRDdigitsExtract::FillV0PIDlist(){
 }
 
 ////________________________________________________________________________
-void AliTRDdigitsExtract::DigitsDictionary(AliESDtrack* track, Int_t i, Int_t iTrack,  Int_t iV0, Int_t pdgCode) {
-
+void AliTRDdigitsExtract::DigitsDictionary(AliESDtrack* track, Int_t i, Int_t iTrack,  Int_t iV0, Int_t pdgCode) {  
+    
     if (!ReadDigits()){ return; }  // this is try something out
 
-//represents a local Kalman filtered track from the TRD
     AliTRDtrackV1* trdtrack = NULL;
+    
     // skip boring tracks
-
-    //I'm changin this to only keeping tracks that have exactly 6 tracklets, can change back
-//if this doesn't affect the outpu
     if (trdtrack && trdtrack->GetNumberOfTracklets() == 0) return;
-  //  if (trdtrack && trdtrack->GetNumberOfTracklets() < 6) return;
-
-
-//    if (track->Pt() < 1.5) return;
-if (track->Pt() < 1.5) return;
+    
+    if (track->Pt() < 1.5) return;
     // are there tracks without outer params?
     if ( ! track->GetOuterParam() ) {
       AliWarning(Form("Track %d has no OuterParam", iTrack));
       return;
     }
-
-//we want the track's momentum so we can decide which neural network to run it through
-Float_t PT = track->Pt();
-Float_t P = track->P();
-Float_t Eta = track->Eta();
-Float_t Theta = track->Theta();
-Float_t Phi = track->Phi();
-
-
-    // newest addition
+    
+    // newest addition                                                    
     // print some info about the track
-
+    cout << " ====== TRACK " << iTrack
+         << "   pT = " << track->Pt() << " GeV";
+    if (trdtrack) {
+       cout << ", " << trdtrack->GetNumberOfTracklets()
+            << " tracklets";
+    }
+    cout << " ======" << endl;
+   
     ofstream ofile;
     ofile.open("pythonDict.txt", ios::app);
     if (!ofile.is_open()) {
       printf("ERROR: Could not open output file (pythonDict.txt).");
     }
-
-    ofile << "\n" << universalTracki << ": {'RunNumber': 265377" << ",\n\t'Event': " << fEventNoInFile << ",\n\t'V0TrackID': " << iV0
-    << ",\n\t'track': " << iTrack << ",\n\t'pdgCode': " << pdgCode << ",\n\t'nSigmaElectron': " <<
-    fPIDResponse->NumberOfSigmasTPC(track, AliPID::kElectron) << ",\n\t'nSigmaPion': " <<
-    fPIDResponse->NumberOfSigmasTPC(track, AliPID::kPion) << ",\n\t'PT': " << PT << ",\n\t'P': " << P << ",\n\t'Eta': " << Eta << ",";
+ 
+    ofile << "\n" << universalTracki << ": {'Event': " << fEventNoInFile << ",\n\t'V0TrackID': " << iV0
+    << ",\n\t'track': " << iTrack << ",\n\t'pdgCode': " << pdgCode << ",";
     universalTracki++;
 
     // look for tracklets in all 5 layers
@@ -572,59 +507,71 @@ Float_t Phi = track->Phi();
       Int_t det=-1;
       Int_t row=-1;
       Int_t col=-1;
-
+        
       Int_t det2,row2,col2;
       if ( FindDigits(track->GetOuterParam(),
      	      fESD->GetMagneticField(), ly,
               &det2,&row2,&col2) ) {
-
+    
         if (det>=0 && det!=det2) {
-           AliWarning("DET mismatch between tracklet and extrapolation: "
+           AliWarning("DET mismatch between tracklet and extrapolation: " 
                  + TString(Form("%d != %d", det, det2)));
+    
           if (row>=0 && row!=row2) {
-            AliWarning("ROW mismatch between tracklet and extrapolation: "
+            AliWarning("ROW mismatch between tracklet and extrapolation: " 
                         + TString(Form("%d != %d", row, row2)));
           }
-        }
-
+        } 
+              		       	  		
         det = det2;
         row = row2;
         col = col2;
+                    			
+        cout << "    outparam: "
+             << det2 << ":" << row2 << ":" << col2 << "   "
+             << track->GetOuterParam()->GetX() << " / "
+             << track->GetOuterParam()->GetY() << " / "
+             << track->GetOuterParam()->GetZ() 
+             << endl;
       }
-
+      
       if (det<0) {
         ofile << "},";
         ofile.close();
         continue;
-      }
-
+      }    	     	     	     	                 
+      
       if (det>=0) {
-        // cout << "Found tracklet at "
-        //      << det << ":" << row << ":" << col << endl;
-
+        cout << "Found tracklet at "
+             << det << ":" << row << ":" << col << endl;
+         
         ofile << "\n\t'det" << ly << "': " << det <<","
         << "\n\t'row" << ly << "': " << row << ","
-        << "\n\t'col" << ly << "': " << col << ",";
-
-        int np = 8;
+        << "\n\t'col" <<ly << "': " << col << ",";
+           		     	     	     	     	                       		     	
+        int np = 5;
         if ( col-np < 0 || col+np >= 144 ){
           ofile << "},";
           ofile.close();
-          continue;
+          continue; 
         }
-        ofile << "\n\t'layer" << ly << "': [";
+        ofile << "\n\t'layer" << ly << "': [";                  
         for (int c = col-np; c<=col+np;c++) {
+          cout << "  " << setw(3) << c << " ";
           ofile << "[";
           for (int t=0; t<fDigMan->GetDigits(det)->GetNtime(); t++) {
+            cout << setw(4) << fDigMan->GetDigitAmp(row,c,t,det);
             ofile << fDigMan->GetDigitAmp(row,c,t,det) << ", ";
           }
           ofile << "],\n\t\t\t\t";
+          cout << endl;
         }
         ofile << "],";
-      }
+      } 
       ofile << "},";
       ofile.close();
-
+      cout << endl;
+      
     }
 }
 
@@ -669,13 +616,13 @@ Bool_t AliTRDdigitsExtract::ReadDigit()
   // read digits from file
   TTree* tr = (TTree*)fDigitsInputFile->Get(Form("Event%d/TreeD",
                                                  fEventNoInFile)); // added a +
-
-  cout << tr << " one of those trees      " << fDigitsInputFileName  << endl;
+ 
+  cout << tr << " one of those trees      " << fDigitsInputFileName  << endl; 
   if (!fDigitsInputFile) {
     AliError(Form("digits tree for event %d not found", fEventNoInFile));
-    return kFALSE;
+    return kFALSE; 
   }
-
+  
   //cout << "does is not know how to read here " << fDigitsInputFile << "         " << tr << "     " << fDigMan << endl;
   if (tr == 0){ cout << "Getting out of this " << endl; return kFALSE;}
   fDigMan->ReadDigits(tr);
@@ -688,10 +635,10 @@ Bool_t AliTRDdigitsExtract::ReadDigit()
   for (Int_t det=0; det<540; det++) {
     if (fDigMan->GetDigits(det)) {
       fDigMan->GetDigits(det)->Expand();
-
+      
     }
   }
-  return kTRUE;
+  return kTRUE; 
 }*/
 
 //*/

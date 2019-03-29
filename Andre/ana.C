@@ -44,7 +44,7 @@ void ana()
   gROOT->LoadMacro("CreateESDChain.C");
 #endif
 //
-//  TChain* chain = CreateESDChain("files.txt", 1, 0, kFALSE, kTRUE);
+  TChain* chain = CreateESDChain("files.txt", 1, 0, kFALSE, kTRUE);
 //
 //
 
@@ -125,7 +125,9 @@ void ana()
   mgr->PrintStatus();
 
    if (local){
-     TChain* chain = new TChain("esdTree");
+     //TChain* chain = new TChain("esdTree");
+
+     //mgr->StartAnalysis("local", chain,1000);
 
      //chain->Add("alien:///alice/data/2016/LHC16q/000265377/pass1_CENT_wSDD/16000265377019.102/root_archive.zip#AliESDs.root");
      chain->Add("/alice/data/2016/LHC16q/000265377/pass1_CENT_wSDD/16000265377019.102/root_archive.zip#AliESDs.root");
@@ -153,43 +155,31 @@ void ana()
     alienHandler->SetRunPrefix("000");
 
     // runnumber
-//G: here I will comment out the first run and uncomment the second one
-
-    //alienHandler->AddRunNumber(265377); //might have been some issue with merging: ===== TERMINATING GRID ANALYSIS JOB: testAnalysis
-// ->AliAnalysisManager::ImportWrappers()
-// E-TBufferFile::CheckByteCount: object of class TH2F read too many bytes: 1600320570 instead of 526578746
-// W-TBufferFile::CheckByteCount: TH2F::Streamer() not in sync with data on file DigitsExtractQA.root, fix Streamer()
-//    Importing data for container cdigitqa
-//     -> file DigitsExtractQA.root
-//    ImportData: Unwrapping data cdigitqa for container cdigitqa
-// <-AliAnalysisManager::ImportWrappers(): 1 containers imported
-// ->AliAnalysisManager::Terminate()
-// W-AliAnalysisManager::ValidateOutputs: File DigitsExtractQA.root was not closed. Closing.
-// =Analysis testAnalysis= Terminate time:  0.00130916[sec]
-
-   //alienHandler->AddRunNumber(265378);// running stage 3; stage 2 failed, using more than 5000MB disk space, resubmitted 6 times
-   //stage 3 also failed. this run is just too big for QA: -TFileMerger::RecursiveRemove: Output file of the TFile Merger (targeting DigitsExtractQA_0000.root) has been deleted (likely due to a TTree larger than 100Gb)
-//F-TFileMerger::RecursiveRemove: aborting execution due to AliFatal
-    //alienHandler->AddRunNumber(265309); //stage 3 done
-    //alienHandler->AddRunNumber(265332); ////stage 3 done
-    alienHandler->AddRunNumber(265334);//stage 1 busy
-//    alienHandler->AddRunNumber(265335);
-//    alienHandler->AddRunNumber(265336);
-//    alienHandler->AddRunNumber(265338);
-//    alienHandler->AddRunNumber(265339);
-//    alienHandler->AddRunNumber(265342);
-//    alienHandler->AddRunNumber(265343);
-//    alienHandler->AddRunNumber(265344);
-//    alienHandler->AddRunNumber(265381);
-//    alienHandler->AddRunNumber(265383);
-//    alienHandler->AddRunNumber(265385);
-/*    alienHandler->AddRunNumber(265388);
+    alienHandler->AddRunNumber(265377);
+    //alienHandler->AddRunNumber(265378);
+    /*
+    alienHandlet->AddRunNumber(265309);
+    alienHandler->AddRunNumber(265332);
+    alienHandler->AddRunNumber(265334);
+    alienHandler->AddRunNumber(265335);
+    alienHandler->AddRunNumber(265336);
+    alienHandler->AddRunNumber(265338);
+    alienHandler->AddRunNumber(265339);
+    alienHandler->AddRunNumber(265342);
+    alienHandler->AddRunNumber(265343);
+    alienHandler->AddRunNumber(265344);
+    alienHandler->AddRunNumber(265377);
+    alienHandler->AddRunNumber(265378);
+    alienHandler->AddRunNumber(265381);
+    alienHandler->AddRunNumber(265383);
+    alienHandler->AddRunNumber(265385);
+    alienHandler->AddRunNumber(265388);
     alienHandler->AddRunNumber(265419);
     alienHandler->AddRunNumber(265420);
     alienHandler->AddRunNumber(265425);
     alienHandler->AddRunNumber(265426);
-    alienHandler->AddRunNumber(265499);*/
-
+    alienHandler->AddRunNumber(265499);
+    */
 
     // number of files per subjob
     alienHandler->SetSplitMaxInputFileNumber(40);
@@ -215,16 +205,13 @@ void ana()
     //
     //
     alienHandler->SetMaxMergeStages(1);
-    //
     alienHandler->SetMergeViaJDL(kTRUE);
     //alienHandler->SetMergeViaJDL(kFALSE);
 
-//*****************************************8
-//  alienHandler->SetMergeViaJDL(kFALSE):
     //
     //
     alienHandler->SetGridWorkingDir("wd");
-    alienHandler->SetGridOutputDir("outDir265334"); //make sure of this!
+    alienHandler->SetGridOutputDir("OutDir265377");
 
     //
     mgr->SetGridHandler(alienHandler);
@@ -235,12 +222,16 @@ void ana()
 	alienHandler->SetRunMode("test");
 	mgr->StartAnalysis("grid");
     }else{
-	//alienHandler->SetRunMode("full");
-	//alienHandler->SetRunMode("terminate");
+	//
+	alienHandler->SetRunMode("full");
+  //alienHandler->SetRunMode("terminate");
 	mgr->StartAnalysis("grid");
-
     }
 
   }
 
 }
+
+
+
+

@@ -3,10 +3,10 @@ Jobtag = {
 };
 # Input xml collections
 InputDataCollection = {
-   "LF:/alice/cern.ch/user/c/cviljoen/new-wd-momentum-test/$1,nodownload"
+   "LF:/alice/cern.ch/user/c/cviljoen/wd-additional-info/$1,nodownload"
 };
 # Output directory
-OutputDir = "/alice/cern.ch/user/c/cviljoen//new-wd-momentum-test/outDir265378/$2/#alien_counter_03i#";
+OutputDir = "/alice/cern.ch/user/c/cviljoen//wd-additional-info/outDir265377/$2/#alien_counter_03i#";
 # List of requested packages
 Packages = {
    "VO_ALICE@AliPhysics::vAN-20180902-1",
@@ -14,13 +14,13 @@ Packages = {
 };
 # List of input files to be uploaded to workers
 InputFile = {
-   "LF:/alice/cern.ch/user/c/cviljoen/new-wd-momentum-test/myAnalysis.C",
-   "LF:/alice/cern.ch/user/c/cviljoen/new-wd-momentum-test/myTask.root",
-   "LF:/alice/cern.ch/user/c/cviljoen/new-wd-momentum-test/AliTRDdigitsExtract.cxx",
-   "LF:/alice/cern.ch/user/c/cviljoen/new-wd-momentum-test/AliTRDdigitsExtract.h"
+   "LF:/alice/cern.ch/user/c/cviljoen/wd-additional-info/myAnalysis.C",
+   "LF:/alice/cern.ch/user/c/cviljoen/wd-additional-info/myTask.root",
+   "LF:/alice/cern.ch/user/c/cviljoen/wd-additional-info/AliTRDdigitsExtract.cxx",
+   "LF:/alice/cern.ch/user/c/cviljoen/wd-additional-info/AliTRDdigitsExtract.h"
 };
 # This is the startup script
-Executable = "/alice/cern.ch/user/c/cviljoen/new-wd-momentum-test/myTask.sh";
+Executable = "/alice/cern.ch/user/c/cviljoen/wd-additional-info/myTask.sh";
 # We split per SE or file
 Split = "se";
 # Time after which the job is killed (166 min.)
@@ -39,7 +39,7 @@ Output = {
 # AliEn price for this job
 Price = "1";
 # Validation script to be run for each subjob
-Validationcommand = "/alice/cern.ch/user/c/cviljoen/new-wd-momentum-test/myTask_validation.sh";
+Validationcommand = "/alice/cern.ch/user/c/cviljoen/wd-additional-info/myTask_validation.sh";
 User = "cviljoen";
 
 # JDL variables
