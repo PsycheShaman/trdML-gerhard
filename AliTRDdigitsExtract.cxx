@@ -659,9 +659,10 @@ Float_t Phi = track->Phi();
         ofile << "],";
       }
       ofile << "},";
-      ofile.close();
+      //ofile.close();
 
     }
+    ofile.close();
 }
 
 

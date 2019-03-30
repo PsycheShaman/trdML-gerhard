@@ -14,7 +14,7 @@
 void ana()
 {
 
-  Bool_t local = kFALSE;
+  Bool_t local = kTRUE;
   Bool_t gridTest = kFALSE;
 
 #if !defined (__CINT__) || defined (__CLING__)
@@ -153,7 +153,6 @@ void ana()
     alienHandler->SetRunPrefix("000");
 
     // runnumber
-//G: here I will comment out the first run and uncomment the second one
 
     alienHandler->AddRunNumber(265377);
 
