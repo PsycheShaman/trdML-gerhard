@@ -561,6 +561,7 @@ Float_t P = track->P();
 Float_t Eta = track->Eta();
 Float_t Theta = track->Theta();
 Float_t Phi = track->Phi();
+Double_t dEdx = track->GetTPCsignal();
 
 
 
@@ -576,7 +577,7 @@ Float_t Phi = track->Phi();
     ofile << "\n" << universalTracki << ": {'RunNumber': 265377" << ",\n\t'Event': " << fEventNoInFile << ",\n\t'V0TrackID': " << iV0
     << ",\n\t'track': " << iTrack << ",\n\t'pdgCode': " << pdgCode << ",\n\t'nSigmaElectron': " <<
     fPIDResponse->NumberOfSigmasTPC(track, AliPID::kElectron) << ",\n\t'nSigmaPion': " <<
-    fPIDResponse->NumberOfSigmasTPC(track, AliPID::kPion) << ",\n\t'PT': " << PT << ",\n\t'P': " << P << ",\n\t'Eta': " << Eta << ",";
+    fPIDResponse->NumberOfSigmasTPC(track, AliPID::kPion) << ",\n\t'PT': " << PT << ",\n\t'dEdX': " << dEdX << ",\n\t'P': " << P << ",\n\t'Eta': " << Eta << ",";
     universalTracki++;
 
     //numtracklets = track->GetNumberOfTRDslices();
@@ -638,9 +639,9 @@ Float_t Phi = track->Phi();
          cout << "Found tracklet at "
              << det << ":" << row << ":" << col << endl;
 
-        ofile << "\n\t'det" << ly << "': " << det <<","
-        << "\n\t'row" << ly << "': " << row << ","
-        << "\n\t'col" << ly << "': " << col << ",";
+        ofile << "\n\t'det" /*<< ly*/ << "': " << det <<","
+        << "\n\t'row" << /*ly <<*/ "': " << row << ","
+        << "\n\t'col" << /*ly <<*/ "': " << col << ",";
 
         int np = 8;
         if ( col-np < 0 || col+np >= 144 ){
@@ -648,7 +649,7 @@ Float_t Phi = track->Phi();
           ofile.close();
           continue;
         }
-        ofile << "\n\t'layer" << ly << "': [";
+        ofile << "\n\t'layer': " << ly << ", 'signal': [";
         for (int c = col-np; c<=col+np;c++) {
           ofile << "[";
           for (int t=0; t<fDigMan->GetDigits(det)->GetNtime(); t++) {

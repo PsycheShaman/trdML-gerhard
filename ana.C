@@ -14,7 +14,7 @@
 void ana()
 {
 
-  Bool_t local = kTRUE;
+  Bool_t local = kFALSE;
   Bool_t gridTest = kFALSE;
 
 #if !defined (__CINT__) || defined (__CLING__)
@@ -210,8 +210,8 @@ void ana()
 //  alienHandler->SetMergeViaJDL(kFALSE):
     //
     //
-    alienHandler->SetGridWorkingDir("wd_debug");
-    alienHandler->SetGridOutputDir("outDir265377"); //make sure of this!
+    alienHandler->SetGridWorkingDir("wd");
+    alienHandler->SetGridOutputDir("od"); 
 
     //
     mgr->SetGridHandler(alienHandler);
