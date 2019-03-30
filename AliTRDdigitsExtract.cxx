@@ -84,6 +84,7 @@ void AliTRDdigitsExtract::UserCreateOutputObjects()
 
   ofstream ofile;
   ofile.open("pythonDict.txt", ios::app);
+  //cout << "ofile opened";
   //ofile.open("dat.csv", ios::app);
   if (!ofile.is_open()) {
     printf("ERROR: Could not open output file (pythonDict.txt).");
@@ -93,6 +94,7 @@ void AliTRDdigitsExtract::UserCreateOutputObjects()
   //ofile << "{";
 
   ofile << "{";
+  //cout << "ofile << {";
 
   ofile.close();
 
@@ -258,6 +260,7 @@ void AliTRDdigitsExtract::UserExec(Option_t *)
   FillV0PIDlist();
 
   if (!fV0tags) {
+    //cout << "no V0 tags";
     return;
   }
 
@@ -275,7 +278,7 @@ void AliTRDdigitsExtract::AnalyseEvent()
 {
 
   // make histograms from output list available
-
+  //cout << "Running AnalyseEvent()";
   TH1* fhpte = (TH1*)fOutputList->FindObject("fhpte");
   TH1* fhptp = (TH1*)fOutputList->FindObject("fhptp");
   TH1* fhptTRDp = (TH1*)fOutputList->FindObject("fhptTRDp");
@@ -312,13 +315,18 @@ void AliTRDdigitsExtract::AnalyseEvent()
 
 //reset PT
   Float_t pt = 0;
+  //cout << "Momentum =" << pt;
   //get the number of tracks contained in the ESD
   Int_t nTracks = fESD->GetNumberOfTracks();
+  //cout << "Number of tracks in ESD = " << nTracks;
   // loop over tracks
 
+  //cout << "Filling fhdEdx, nSigma";
+  //cout << "Filling for all tracks";
 
 for(Int_t i=0; i < nTracks; i++) {
 //get the specific track
+    //cout << "Track number = " << i;
     AliESDtrack* track = fESD->GetTrack(i);
     //bethe bloch is filled as dE\dx, which is the tpc signal,
     //plotted as a function of its momentum:
@@ -366,6 +374,7 @@ for(Int_t i=0; i < nTracks; i++) {
 
     }
     //pion pdg code is 211
+    //cout << "Filling for pions";
     if ( abs(fV0tags[i]) == 211 ) {
       fhptp->Fill(track->P());
       fhsigmap->Fill(fPIDResponse->NumberOfSigmasTPC(track, AliPID::kPion)); // only sigma
@@ -398,22 +407,24 @@ for(Int_t i=0; i < nTracks; i++) {
       if ( abs(fV0tags[i]) == 211 ) {
 	fhptTRDp->Fill(track->P());
       }
-    }else {cout << "this goes off" << endl;} //what is this? particles that are neither pion or electron?
+    }else { } //what is this? particles that are neither pion or electron?
 
   }
 }
 
 //______________________________________________________________________________
 void AliTRDdigitsExtract::FillV0PIDlist(){
-
+  //cout << "Fill FillV0PIDlist()";
   // no need to run if the V0 cuts are not set
   //but do we need to set them?
   if (!fV0cuts) {
+    //cout << "no V0s";
     return;
   }
 
   // basic sanity check...
   if (!fESD) {
+    //cout << "no ESD";
     return;
   }
 
@@ -552,6 +563,7 @@ Float_t Theta = track->Theta();
 Float_t Phi = track->Phi();
 
 
+
     // newest addition
     // print some info about the track
 
@@ -567,16 +579,35 @@ Float_t Phi = track->Phi();
     fPIDResponse->NumberOfSigmasTPC(track, AliPID::kPion) << ",\n\t'PT': " << PT << ",\n\t'P': " << P << ",\n\t'Eta': " << Eta << ",";
     universalTracki++;
 
+    //numtracklets = track->GetNumberOfTRDslices();
+    cout << "------------------------------------------------------------------------" << endl;
+    cout << "Track number: " << iTrack << endl;
+    cout << "------------------------------------------------------------------------" << endl;
+    //cout << "Number of tracklets: " << numtracklets << endl;
+    cout << "------------------------------------------------------------------------" << endl;
+    cout << "Loop through tracklets" << endl;
+    cout << "------------------------------------------------------------------------" << endl;
     // look for tracklets in all 5 layers
     for (int ly=0;ly<6;ly++) {
+      cout << "ly is now: " << ly << endl;
       Int_t det=-1;
       Int_t row=-1;
       Int_t col=-1;
+
+      cout << "det = " << det << endl;
+      cout << "row = " << row << endl;
+      cout << "col = " << col << endl;
 
       Int_t det2,row2,col2;
       if ( FindDigits(track->GetOuterParam(),
      	      fESD->GetMagneticField(), ly,
               &det2,&row2,&col2) ) {
+                cout << "found digits!" << endl;
+                cout << "det2 = " << det2 << endl;
+                cout << "row2 = " << row2 << endl;
+                cout << "col2 = " << col2 << endl;
+
+                cout << "Checking if det >= 0 && det!=det2......" << endl;
 
         if (det>=0 && det!=det2) {
            AliWarning("DET mismatch between tracklet and extrapolation: "
@@ -586,21 +617,26 @@ Float_t Phi = track->Phi();
                         + TString(Form("%d != %d", row, row2)));
           }
         }
-
+        cout << "Now setting det = det2 and row and col..." << endl;
         det = det2;
+        cout << "det is now: " << det << endl;
         row = row2;
+        cout << "row is now: " << row << endl;
         col = col2;
+        cout << "col is now: " << col << endl;
       }
 
       if (det<0) {
+        cout << "det < 0: closing file with }" << endl;
         ofile << "},";
         ofile.close();
         continue;
       }
 
       if (det>=0) {
-        // cout << "Found tracklet at "
-        //      << det << ":" << row << ":" << col << endl;
+
+         cout << "Found tracklet at "
+             << det << ":" << row << ":" << col << endl;
 
         ofile << "\n\t'det" << ly << "': " << det <<","
         << "\n\t'row" << ly << "': " << row << ","

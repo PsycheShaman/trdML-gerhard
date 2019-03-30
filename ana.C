@@ -155,24 +155,12 @@ void ana()
     // runnumber
 //G: here I will comment out the first run and uncomment the second one
 
-    //alienHandler->AddRunNumber(265377); //might have been some issue with merging: ===== TERMINATING GRID ANALYSIS JOB: testAnalysis
-// ->AliAnalysisManager::ImportWrappers()
-// E-TBufferFile::CheckByteCount: object of class TH2F read too many bytes: 1600320570 instead of 526578746
-// W-TBufferFile::CheckByteCount: TH2F::Streamer() not in sync with data on file DigitsExtractQA.root, fix Streamer()
-//    Importing data for container cdigitqa
-//     -> file DigitsExtractQA.root
-//    ImportData: Unwrapping data cdigitqa for container cdigitqa
-// <-AliAnalysisManager::ImportWrappers(): 1 containers imported
-// ->AliAnalysisManager::Terminate()
-// W-AliAnalysisManager::ValidateOutputs: File DigitsExtractQA.root was not closed. Closing.
-// =Analysis testAnalysis= Terminate time:  0.00130916[sec]
+    alienHandler->AddRunNumber(265377);
 
-   //alienHandler->AddRunNumber(265378);// running stage 3; stage 2 failed, using more than 5000MB disk space, resubmitted 6 times
-   //stage 3 also failed. this run is just too big for QA: -TFileMerger::RecursiveRemove: Output file of the TFile Merger (targeting DigitsExtractQA_0000.root) has been deleted (likely due to a TTree larger than 100Gb)
-//F-TFileMerger::RecursiveRemove: aborting execution due to AliFatal
-    //alienHandler->AddRunNumber(265309); //stage 3 done
-    //alienHandler->AddRunNumber(265332); ////stage 3 done
-    alienHandler->AddRunNumber(265334);//stage 1 busy
+   //alienHandler->AddRunNumber(265378);
+    //alienHandler->AddRunNumber(265309);
+    //alienHandler->AddRunNumber(265332);
+    //alienHandler->AddRunNumber(265334);
 //    alienHandler->AddRunNumber(265335);
 //    alienHandler->AddRunNumber(265336);
 //    alienHandler->AddRunNumber(265338);
@@ -223,8 +211,8 @@ void ana()
 //  alienHandler->SetMergeViaJDL(kFALSE):
     //
     //
-    alienHandler->SetGridWorkingDir("wd");
-    alienHandler->SetGridOutputDir("outDir265334"); //make sure of this!
+    alienHandler->SetGridWorkingDir("wd_debug");
+    alienHandler->SetGridOutputDir("outDir265377"); //make sure of this!
 
     //
     mgr->SetGridHandler(alienHandler);
@@ -235,7 +223,7 @@ void ana()
 	alienHandler->SetRunMode("test");
 	mgr->StartAnalysis("grid");
     }else{
-	//alienHandler->SetRunMode("full");
+	alienHandler->SetRunMode("full");
 	//alienHandler->SetRunMode("terminate");
 	mgr->StartAnalysis("grid");
 

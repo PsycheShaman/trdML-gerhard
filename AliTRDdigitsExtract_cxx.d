@@ -218,7 +218,7 @@
 ./AliTRDdigitsExtract_cxx.so: /cvmfs/alice.cern.ch/x86_64-2.6-gnu-4.1.2/Packages/AliRoot/v5-09-37-1/include/AliESDv0KineCuts.h
 ./AliTRDdigitsExtract_cxx.so: AliTRDdigitsExtract.h
 ./AliTRDdigitsExtract_cxx.so: /cvmfs/alice.cern.ch/x86_64-2.6-gnu-4.1.2/Packages/AliRoot/v5-09-37-1/include/AliAnalysisTaskSE.h
-./AliTRDdigitsExtract_cxx.so: /cvmfs/alice.cern.ch/x86_64-2.6-gnu-4.1.2/Packages/AliPhysics/vAN-20180902-1/include/AliTRDdigitsTask.h
+./AliTRDdigitsExtract_cxx.so: AliTRDdigitsTask.h
 ./AliTRDdigitsExtract_cxx.so: /cvmfs/alice.cern.ch/x86_64-2.6-gnu-4.1.2/Packages/AliRoot/v5-09-37-1/include/AliPIDResponse.h
 ./AliTRDdigitsExtract_cxx.so: /cvmfs/alice.cern.ch/x86_64-2.6-gnu-4.1.2/Packages/AliRoot/v5-09-37-1/include/AliITSPIDResponse.h
 ./AliTRDdigitsExtract_cxx.so: /cvmfs/alice.cern.ch/x86_64-2.6-gnu-4.1.2/Packages/AliRoot/v5-09-37-1/include/AliTPCPIDResponse.h
