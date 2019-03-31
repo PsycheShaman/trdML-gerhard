@@ -578,8 +578,8 @@ Float_t Phi = track->Phi();
     << ",\n\t'track': " << iTrack << ",\n\t'pdgCode': " << pdgCode << ",\n\t'nSigmaElectron': " <<
     fPIDResponse->NumberOfSigmasTPC(track, AliPID::kElectron) << ",\n\t'nSigmaPion': " <<
     fPIDResponse->NumberOfSigmasTPC(track, AliPID::kPion) << ",\n\t'PT': " << PT << ",\n\t'dEdX': " <<
-     track->GetTPCsignal() << ",\n\t'P': " << P << ",\n\t'Eta': " << Eta << "," << ",\n\t'Theta': " << Theta << ","
-     << ",\n\t'Phi': " << Phi << ",";
+     track->GetTPCsignal() << ",\n\t'P': " << P << ",\n\t'Eta': " << Eta << "," << "\n\t'Theta': " << Theta << ","
+     << "\n\t'Phi': " << Phi << ",";
     universalTracki++;
 
     //numtracklets = track->GetNumberOfTRDslices();
