@@ -179,14 +179,14 @@ void ana()
 
 
     // number of files per subjob
-    alienHandler->SetSplitMaxInputFileNumber(40);
+    alienHandler->SetSplitMaxInputFileNumber(20);//was 40
     TString name = "myTask";
     //TString tmp; tmp.Form("%d",n);
     //name.Append(tmp.Data());
     name.Append(".sh");
     alienHandler->SetExecutable(name);
     //
-    alienHandler->SetTTL(10000);
+    alienHandler->SetTTL(20000);//was 1000
     alienHandler->SetJDLName("myTask.jdl");
 
     alienHandler->SetOutputToRunNo(kTRUE);
@@ -211,7 +211,7 @@ void ana()
     //
     //
     alienHandler->SetGridWorkingDir("wd");
-    alienHandler->SetGridOutputDir("od"); 
+    alienHandler->SetGridOutputDir("od");
 
     //
     mgr->SetGridHandler(alienHandler);

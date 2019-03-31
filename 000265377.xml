@@ -6481,7 +6481,7 @@
     <event name="999">
       <file name="AliESDs.root" aclId="" broken="0" ctime="2016-12-21 08:07:25" dir="576322263" entryId="576337819" expiretime="" gowner="alidaq" guid="B03F70A4-C74B-11E6-B74D-D3E3BAF08A55" guidtime="11E6C74B" jobid="793917880" lfn="/alice/data/2016/LHC16q/000265377/pass1_CENT_wSDD/16000265377028.302/AliESDs.root" md5="29dfacf7a1b28b009916f020c10b9797" owner="alidaq" perm="755" replicated="0" size="205172908" turl="alien:///alice/data/2016/LHC16q/000265377/pass1_CENT_wSDD/16000265377028.302/AliESDs.root" type="f" />
     </event>
-    <info command="[/alice/cern.ch/user/c/cviljoen/]: find -z -x collection -l 15000 -o 0 /alice/data/2016/LHC16q//000265377 pass1_CENT_wSDD/*/*ESDs.root" creator="admin" date="Sat Mar 30 09:13:09 CET 2019" timestamp="1553933589" />
+    <info command="[/alice/cern.ch/user/c/cviljoen/]: find -z -x collection -l 15000 -o 0 /alice/data/2016/LHC16q//000265377 pass1_CENT_wSDD/*/*ESDs.root" creator="admin" date="Sun Mar 31 00:44:23 CET 2019" timestamp="1553989463" />
   </collection>
 </alien>
 

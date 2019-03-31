@@ -16,17 +16,17 @@ Packages = {
 };
 # List of input files to be uploaded to workers
 InputFile = {
-   "LF:/alice/cern.ch/user/c/cviljoen/wd_debug/myTask_merge.C",
-   "LF:/alice/cern.ch/user/c/cviljoen/wd_debug/myTask.root",
-   "LF:/alice/cern.ch/user/c/cviljoen/wd_debug/AliTRDdigitsExtract.cxx",
-   "LF:/alice/cern.ch/user/c/cviljoen/wd_debug/AliTRDdigitsExtract.h",
+   "LF:/alice/cern.ch/user/c/cviljoen/wd/myTask_merge.C",
+   "LF:/alice/cern.ch/user/c/cviljoen/wd/myTask.root",
+   "LF:/alice/cern.ch/user/c/cviljoen/wd/AliTRDdigitsExtract.cxx",
+   "LF:/alice/cern.ch/user/c/cviljoen/wd/AliTRDdigitsExtract.h",
    "LF:$1/Stage_$2.xml"
 };
 # This is the startup script
-Executable = "/alice/cern.ch/user/c/cviljoen/wd_debug/myTask_merge.sh";
+Executable = "/alice/cern.ch/user/c/cviljoen/wd/myTask_merge.sh";
 # We split per SE for merging in stages
-# Time after which the job is killed (166 min.)
-TTL = "10000";
+# Time after which the job is killed (333 min.)
+TTL = "20000";
 # Maximum number of input files to be merged in one go
 # Format of input data
 # Collection name to be processed on each worker node
@@ -39,6 +39,6 @@ Arguments = "Stage_$2.xml $2";
 # AliEn price for this job
 Price = "1";
 # Validation script to be run for each subjob
-Validationcommand = "/alice/cern.ch/user/c/cviljoen/wd_debug/myTask_validation_merge.sh";
+Validationcommand = "/alice/cern.ch/user/c/cviljoen/wd/myTask_validation_merge.sh";
 User = "cviljoen";
 Workdirectorysize = {"5000MB"};

@@ -561,7 +561,7 @@ Float_t P = track->P();
 Float_t Eta = track->Eta();
 Float_t Theta = track->Theta();
 Float_t Phi = track->Phi();
-Double_t dEdx = track->GetTPCsignal();
+//Double_t dEdx = track->GetTPCsignal();
 
 
 
@@ -577,7 +577,9 @@ Double_t dEdx = track->GetTPCsignal();
     ofile << "\n" << universalTracki << ": {'RunNumber': 265377" << ",\n\t'Event': " << fEventNoInFile << ",\n\t'V0TrackID': " << iV0
     << ",\n\t'track': " << iTrack << ",\n\t'pdgCode': " << pdgCode << ",\n\t'nSigmaElectron': " <<
     fPIDResponse->NumberOfSigmasTPC(track, AliPID::kElectron) << ",\n\t'nSigmaPion': " <<
-    fPIDResponse->NumberOfSigmasTPC(track, AliPID::kPion) << ",\n\t'PT': " << PT << ",\n\t'dEdX': " << dEdX << ",\n\t'P': " << P << ",\n\t'Eta': " << Eta << ",";
+    fPIDResponse->NumberOfSigmasTPC(track, AliPID::kPion) << ",\n\t'PT': " << PT << ",\n\t'dEdX': " <<
+     track->GetTPCsignal() << ",\n\t'P': " << P << ",\n\t'Eta': " << Eta << "," << ",\n\t'Theta': " << Theta << ","
+     << ",\n\t'Phi': " << Phi << ",";
     universalTracki++;
 
     //numtracklets = track->GetNumberOfTRDslices();
@@ -659,10 +661,11 @@ Double_t dEdx = track->GetTPCsignal();
         }
         ofile << "],";
       }
-      ofile << "},";
+      //ofile << "},";
       //ofile.close();
 
     }
+    ofile << "},";
     ofile.close();
 }
 
